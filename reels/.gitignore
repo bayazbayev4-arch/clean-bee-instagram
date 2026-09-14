@@ -1,0 +1,3 @@
+# Finished and raw videos live on the `media` branch, never on main
+*.mp4
+*/frames/

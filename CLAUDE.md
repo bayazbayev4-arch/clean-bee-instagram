@@ -9,6 +9,7 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 - **Reusable stories on repeat** — `stories/` + `stories/schedule.json`; `skills/story-rotation/SKILL.md` keeps the next 7 days scheduled.
 - A cloud routine runs every evening at **21:00 Astana**: first the story rotation, then `skills/daily-ig-post/SKILL.md` for the **next** day's feed posts.
 - Every post is saved in `posts/DD-MM-YYYY-slot-slug/` and logged in `log.csv`.
+- **AI Reels (Bee, 14-09-2026):** one 10 s AI video per due day (`reels.every_n_days`), Bee as the main character, the brand only on the end card. Made by `skills/daily-reel/SKILL.md` from its own nightly routine, so a failed video never blocks the feed. First `reels.drafts_before_auto` Reels are Metricool drafts, then live. Paused while `reels.enabled` is false.
 
 ## Publishing mode (Bee's decision, 14-09-2026)
 - **Fully automatic.** Posts are scheduled live with no approval step. Bee explicitly approved this on 14-09-2026 ("I trust it") — a standing exception to the root "never post without confirmation" rule, for this Instagram only.
@@ -22,11 +23,12 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 - Never repeat an idea already in `log.csv` within 30 days.
 - Text on images is rendered by `scripts/compose.py`, never by the image model (AI mangles Cyrillic).
 - Never write into another role's folders. Brand assets here are copies — the source of truth is the app repo's `public/brand/`.
+- **No Clean Bee branded items exist** (Bee, 14-09-2026: no bags, garment covers, wrap, uniforms or merch). Never show them in generated images or videos; the logo appears only through `compose.py` and the Reel end card.
 
 ## Files
 | Path | What |
 |---|---|
-| `config.json` | publish mode, timezone, slots, fallback times, hosting |
+| `config.json` | publish mode, timezone, slots, fallback times, hosting; `reels` + `trends` for the AI Reels |
 | `brand/brand.md` | colours, font, voice, how the service works |
 | `brand/` | logo, mark, mascot, service icons, font |
 | `plan/pillars.md` | the content themes and the daily mix |

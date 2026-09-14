@@ -27,5 +27,29 @@
     "button_label": "Заказать в приложении",
     "caption_line": "Оформите заказ за 60 секунд в приложении Clean Bumble Bee — ссылка в профиле."
   },
-  "language": "ru"
+  "language": "ru",
+  "reels": {
+    "enabled": false,
+    "model": "kling3_0",
+    "every_n_days": 2,
+    "drafts_before_auto": 3,
+    "networks": ["instagram", "tiktok"],
+    "aspect_ratio": "9:16",
+    "time_window": ["18:00", "22:00"],
+    "fallback_time": "19:00",
+    "min_gap_from_feed_minutes": 60,
+    "credit_reserve": 60,
+    "person_element_id": "c30f4ede-92d6-406d-b24e-0c3a3231fa55",
+    "models": {
+      "kling3_0": {"credits": 25, "refs": "elements", "params": {"duration": 10, "mode": "pro", "sound": "on"}},
+      "seedance_2_5": {"credits": 90, "refs": "image_references", "params": {"duration": 10, "resolution": "1080p", "mode": "omni_reference", "generate_audio": true}},
+      "cinematic_studio_3_0": {"credits": 100, "refs": "elements", "params": {"duration": 10, "resolution": "1080p", "generate_audio": true}}
+    },
+    "media_branch": "media",
+    "media_keep": 10
+  },
+  "trends": {
+    "tiktok": {"actor": "apidojo/tiktok-scraper", "keywords": ["seedance", "kling ai", "higgsfield", "ai video"], "per_keyword": 15, "input": {"dateRange": "THIS_WEEK", "sortType": "MOST_LIKED", "location": "US", "includeSearchKeywords": true}},
+    "instagram": {"actor": "data-slayer/instagram-search-reels", "queries": ["seedance", "higgsfield", "ai video"], "maxPages": 1}
+  }
 }
