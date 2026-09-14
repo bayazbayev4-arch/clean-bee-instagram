@@ -19,6 +19,8 @@
   - Runs on 14-09 and 15-09 at 21:00 will find 15-09 / 16-09 already full and add no feed posts. First normal run that makes feed posts: **16-09-2026 21:00 → fills 17-09** — check that log.
   - Fixed after the test: post b (16-09) said the circle symbol means "dry clean only, never wash at home" — wrong. Circle = professional cleaning allowed; home washing is the washtub symbol. Image + caption corrected and the Metricool post updated (new id 375589063). When replacing an image at the same path, give Metricool the commit-pinned raw URL (`.../<commit-sha>/posts/...`) — the `main` URL can serve the cached old file for a few minutes.
 
+- **TikTok (Bee, 14-09-2026): feed posts only, stories stay Instagram-only.** Each feed post gets a separate TikTok-only Metricool post (same image, caption, time; `tiktokData` in SKILL.md). Added by hand for 15-09 (ids 375608953, 375609402, 375609441, 375609488) and 16-09 (375610040, 375610088, 375610126, 375610202); the nightly routine does it from 17-09. Metricool accepted them as PENDING — **first real TikTok publish is 15-09 08:30**; if it doesn't appear, the TikTok is probably a personal account (Metricool then sends a phone notification instead of posting) → Bee switches to a Business account.
+
 ## Output
 - 1080×1080 PNG (guideline Instagram feed spec). Layouts `tips` / `fact` / `photo` in compose.py; official logo on top, Astana chip, Safe Blue CTA pill at the bottom.
 - Fonts: Manrope subsets copied from the Clean Bee site build (`.next/static/media`) — cyrillic, latin, latin-ext; Montserrat only as a last-resort glyph fallback.
