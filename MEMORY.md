@@ -14,7 +14,8 @@
 - 15-09-2026: 4 live posts made by hand from the local session (Metricool ids 375498575, 375499113, 375498777, 375498902).
 - **Routine blocked (first run 14-09-2026):** (1) `git push` 403 — the Claude GitHub App was never installed on Bee's GitHub account; (2) the cloud environment's network blocked the Higgsfield CDN and cleanbumblebee.com.
   - (2) FIXED 14-09-2026: Default cloud environment → Network access **Custom**, allowed `d8j0ntlcm91z4.cloudfront.net` + `cleanbumblebee.com`, "include default list" kept on (keeps the Trusted list; GitHub and MCP traffic bypass the allowlist anyway).
-  - (1) PENDING: Claude GitHub App install prepared with "Only select repositories → clean-bee-instagram", stopped at GitHub's "Confirm access → Verify via email" (sudo mode) — Bee must verify and click Install & Authorize himself.
+  - (1) FIXED 14-09-2026: Claude GitHub App installed (installation 161596437), repository access = only `clean-bee-instagram`. Bee did GitHub's email verification.
+  - Not yet proven end-to-end from the cloud: first real feed-post run is 15-09 21:00 (fills 16-09). Check its run log.
 
 ## Output
 - 1080×1080 PNG (guideline Instagram feed spec). Layouts `tips` / `fact` / `photo` in compose.py; official logo on top, Astana chip, Safe Blue CTA pill at the bottom.
