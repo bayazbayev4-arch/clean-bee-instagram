@@ -54,6 +54,7 @@ Manrope only (`fonts/`). Headlines ExtraBold, body Medium/SemiBold.
 3. At the station items are inspected; the exact price comes as a Kaspi invoice; cleaning starts only after payment.
 4. Clean items come back in the chosen window; status is visible online.
 - Service area: Astana. Languages: Russian, Kazakh, English.
+- **Care advice must be textbook-correct.** Care-label symbols: washtub = home washing (crossed = don't wash at home); circle = professional cleaning allowed (letters inside tell the cleaner the method; crossed = no dry cleaning); square = tumble drying; triangle = bleaching; iron = ironing. Never say a symbol means "only" or "never" unless it's the crossed-out version. If unsure about a care fact, pick another topic.
 - **Numbers (turnaround hours, delivery fee, free-delivery threshold, prices) only if read from the live site in the same run.** The guideline PDF quotes numbers that are still changing — don't copy them.
 
 ## Services
