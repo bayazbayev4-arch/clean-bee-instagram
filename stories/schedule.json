@@ -1,0 +1,37 @@
+{
+  "timezone": "Asia/Almaty",
+  "horizon_days": 7,
+  "base_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/stories/",
+  "periods": [
+    {
+      "from": "15-09-2026",
+      "to": "27-09-2026",
+      "slots": [
+        {"time": "09:00", "file": "00-opening-28-09.png"},
+        {"time": "12:00", "file": "01-how-it-works.png"},
+        {"time": "15:00", "file": "02-promo-25.png"},
+        {"time": "18:00", "file": "03-first-order-free.png"},
+        {"time": "21:00", "file": "04-pay-after-inspection.png"}
+      ]
+    },
+    {
+      "from": "28-09-2026",
+      "to": "31-12-2026",
+      "slots": [
+        {"time": "09:00", "file": "01-how-it-works.png"},
+        {"time": "13:00", "file": "02-promo-25.png"},
+        {"time": "17:00", "file": "03-first-order-free.png"},
+        {"time": "21:00", "file": "04-pay-after-inspection.png"}
+      ]
+    },
+    {
+      "from": "01-01-2027",
+      "to": null,
+      "slots": [
+        {"time": "09:00", "file": "01-how-it-works.png"},
+        {"time": "15:00", "file": "03-first-order-free.png"},
+        {"time": "21:00", "file": "04-pay-after-inspection.png"}
+      ]
+    }
+  ]
+}
