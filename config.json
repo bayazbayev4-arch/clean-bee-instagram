@@ -29,9 +29,9 @@
   },
   "language": "ru",
   "reels": {
-    "enabled": false,
-    "model": "kling3_0",
-    "every_n_days": 2,
+    "enabled": true,
+    "model": "seedance_2_5",
+    "every_n_days": 5,
     "drafts_before_auto": 3,
     "networks": ["instagram", "tiktok"],
     "aspect_ratio": "9:16",
@@ -40,6 +40,8 @@
     "min_gap_from_feed_minutes": 60,
     "credit_reserve": 60,
     "person_element_id": "c30f4ede-92d6-406d-b24e-0c3a3231fa55",
+    "logo_element_id": "ccff7494-8cd1-485e-be1a-cd7f4c536c31",
+    "logo_file": "brand/logos/stacked-centred.png",
     "models": {
       "kling3_0": {"credits": 25, "refs": "elements", "params": {"duration": 10, "mode": "pro", "sound": "on"}},
       "seedance_2_5": {"credits": 90, "refs": "image_references", "params": {"duration": 10, "resolution": "1080p", "mode": "omni_reference", "generate_audio": true}},
