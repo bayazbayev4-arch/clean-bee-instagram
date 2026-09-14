@@ -4,6 +4,8 @@
   "metricool_brand_id": "6957992",
   "timezone": "Asia/Almaty",
   "posts_per_day": 4,
+  "networks": ["instagram", "tiktok"],
+  "story_networks": ["instagram"],
   "publish_mode": "auto",
   "auto_from": null,
   "auto_switched": true,

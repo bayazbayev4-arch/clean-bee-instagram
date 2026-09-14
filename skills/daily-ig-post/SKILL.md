@@ -70,6 +70,12 @@ Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 ```
 Metricool copies the image to its own storage on creation. Don't use `createScheduledPostForReview`.
 
+**TikTok (Bee, 14-09-2026 — feed posts only, never stories):** for every post in `config.networks` beyond Instagram, make a **second, separate** `createScheduledPost` with the same date, image and caption, `"providers": [{"network": "tiktok"}]`, no `instagramData`, and:
+```json
+"tiktokData": {"title": "<headline, max 90 chars>", "privacyOption": "PUBLIC_TO_EVERYONE", "disableComment": false, "disableDuet": false, "disableStitch": false, "autoAddMusic": true, "photoCoverIndex": 0, "commercialContentThirdParty": false, "commercialContentOwnBrand": true, "isAigc": false}
+```
+Separate posts keep one network's error from blocking the other. When counting "already done" for a date, count Instagram posts only (`instagramData.type == "POST"` with an instagram provider); if Instagram is full but a TikTok copy is missing, add just the TikTok copy. Log both ids in `meta.json` (`metricool_post_id`, `tiktok_post_id`).
+
 ## 8. Save + log
 - `meta.json`: date, slot, time, time_source, pillar, idea, layout, higgsfield_prompt, image_url, metricool_post_id, mode.
 - Append one row per post to `log.csv` (status `scheduled` / `draft` / `failed` + reason). Note anything learned in `MEMORY.md`.
