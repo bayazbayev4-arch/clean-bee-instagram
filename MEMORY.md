@@ -8,6 +8,7 @@
 - Next day filled at 21:00 Astana by the cloud routine.
 
 ## Projects
+- **Clean Bumble Bee opens 28-09-2026** (Bee). Bio in `brand/instagram-bio.md` — swap to the "after opening" version that day. Live offers 14-09: −25% on everything until 31.12, first order free pickup/delivery, then free from 10 000 ₸ (500 ₸/trip otherwise).
 - Public repo bayazbayev4-arch/clean-bee-instagram (images served from raw.githubusercontent.com). Cloud routine **trig_01BPXHcuLGJnHNtob7Jbykmv**, cron `0 16 * * *` UTC = 21:00 Astana.
 - 15-09-2026: 4 live posts made by hand from the local session (Metricool ids 375498575, 375499113, 375498777, 375498902).
 - **Routine blocked (first run 14-09-2026):** (1) `git push` 403 — the Claude GitHub App has no access to this repo; (2) the cloud environment's network blocks the Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) and cleanbumblebee.com. Both need Bee's settings change before nightly runs work.
