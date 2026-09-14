@@ -8,6 +8,7 @@
 - Next day filled at 21:00 Astana by the cloud routine.
 
 ## Projects
+- **Stories (14-09-2026):** 5 reusable stories in `stories/` (see its README). 69 scheduled live for 15-09 → 28-09. **Top up before 28-09** with the next batch (4/day from 29-09), and pull the −25% story after 31-12.
 - **Clean Bumble Bee opens 28-09-2026** (Bee). Bio in `brand/instagram-bio.md` — swap to the "after opening" version that day. Live offers 14-09: −25% on everything until 31.12, first order free pickup/delivery, then free from 10 000 ₸ (500 ₸/trip otherwise).
 - Public repo bayazbayev4-arch/clean-bee-instagram (images served from raw.githubusercontent.com). Cloud routine **trig_01BPXHcuLGJnHNtob7Jbykmv**, cron `0 16 * * *` UTC = 21:00 Astana.
 - 15-09-2026: 4 live posts made by hand from the local session (Metricool ids 375498575, 375499113, 375498777, 375498902).
