@@ -37,3 +37,9 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 
 ## Memory
 Keep `MEMORY.md` here current: which pillars/times perform, Bee's corrections on voice and visuals, Metricool tool quirks.
+
+## Self-improvement (learn, but don't self-edit instructions)
+Two tiers, kept deliberately separate:
+- **Facts → `MEMORY.md`, every run, no approval needed.** Tool quirks, what performed, one-off corrections, anything situational. This is the routine's normal memory and it's always safe to write.
+- **Rule changes → proposed, never self-applied.** `SKILL.md` files, `plan/pillars.md`, `brand/brand.md` and `config.json` are the actual instructions the routine follows — editing them changes future behavior, so the routine must not rewrite them on its own judgment. When a run notices a pattern worth promoting into a permanent rule (the same correction 3+ times, a heat-map slot that's consistently best, a pillar that's clearly underperforming), it appends a dated entry under `MEMORY.md` → `## Proposed instruction changes` with: what file/rule to change, the exact new wording, and why. It also names the proposal in that run's final report. Bee reviews and either applies it (or asks for it to be applied) or rejects it — nothing in that section takes effect by itself.
+- **Exception — mechanical/technical fixes may be applied directly**, then logged in `MEMORY.md`: bugs in `scripts/compose.py`, a wrong Metricool API field, a font glyph that renders as a tofu box, a stale id. These aren't editorial judgment calls, just bug fixes — no proposal needed, just a memory note (as already happened with the Manrope "○" glyph fix).

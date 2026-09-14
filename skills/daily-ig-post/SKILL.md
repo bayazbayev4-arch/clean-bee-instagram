@@ -81,5 +81,8 @@ Separate posts keep one network's error from blocking the other. When counting "
 - Append one row per post to `log.csv` (status `scheduled` / `draft` / `failed` + reason). Note anything learned in `MEMORY.md`.
 - Commit and push.
 
-## 9. Report
-Russian, short: date, 4 times + headlines, live or draft, failures.
+## 9. Learn, don't self-edit rules
+Facts (what performed, corrections, tool quirks) always go straight into `MEMORY.md` — no approval needed. If you notice a pattern worth becoming a permanent rule (same correction 3+ times, a slot/pillar that's consistently over- or under-performing, a heat-map hour that's reliably best) — do NOT edit this SKILL.md, `plan/pillars.md`, `brand/brand.md` or `config.json` yourself. Instead add a dated entry to `MEMORY.md` → `## Proposed instruction changes` (file/rule, exact proposed wording, why) and mention it in the final report. Pure mechanical/technical fixes (a compose.py bug, a wrong API field, a font glyph issue) are the one exception — fix those directly and just log them, no proposal needed.
+
+## 10. Report
+Russian, short: date, 4 times + headlines, live or draft, failures. If step 9 added a proposal, name it in one line ("предложение в MEMORY.md: …").

@@ -1,5 +1,10 @@
 # Clean Bee Instagram — Memory
 
+## Proposed instruction changes (pending Bee's review)
+Rule-level proposals only — see CLAUDE.md → "Self-improvement". Each entry: date, which file/rule, proposed new wording, why. Bee applies or deletes the entry; the routine never edits SKILL.md/pillars.md/brand.md/config.json itself from this section.
+
+*(none yet — first candidates will land here once a pattern repeats 3+ times)*
+
 ## Voice
 - Russian, simple everyday words, informative first (see brand/brand.md, taken from the 11-09-2026 brand guideline PDF).
 

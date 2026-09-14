@@ -17,6 +17,7 @@ Paths are relative to the `Clean Bee Instagram/` folder.
      - `info`: `{"autoPublish": true, "draft": false, "descendants": [], "firstCommentText": "", "hasNotReadNotes": false, "media": ["<base_url><file>"], "mediaAltText": [], "providers": [{"network": "instagram"}], "publicationDate": {"dateTime": "YYYY-MM-DDTHH:MM:00", "timezone": "Asia/Almaty"}, "shortener": false, "smartLinkData": {"ids": []}, "instagramData": {"type": "STORY", "isAiGenerated": false}}`
      - No `text` field for stories.
 3. If a create call errors (plan limit, auth), stop the story step, report the exact error, and carry on with the rest of the routine.
-4. Report one line: "Stories: N added (dates), all 7 days covered" or the error.
+4. Learn, don't self-edit rules: log any tool quirk or pattern (a slot that reliably needs re-adding, a story that's underperforming) in `MEMORY.md`. If it looks like a permanent rule change — a rotation timing/order change, dropping or adding a story — don't edit `stories/schedule.json` yourself; add a dated proposal to `MEMORY.md` → `## Proposed instruction changes` and name it in the report instead. (Fixing an outright mechanical bug, e.g. a broken `base_url`, is fine to do directly — just log it.)
+5. Report one line: "Stories: N added (dates), all 7 days covered" or the error — plus, if step 4 added a proposal, a second line naming it.
 
 Changing the rotation (new story, different times, dropping an expired offer) = edit `stories/schedule.json` only. Stories already in Metricool stay as they are; fix those by hand.
