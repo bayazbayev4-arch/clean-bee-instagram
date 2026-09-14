@@ -49,6 +49,7 @@ Same shape as `reels/prompts/example-street-collision.md`:
 
 ## 5. Generate the video
 - `generate_video` with `model` = `reels.model`, `aspect_ratio` = `reels.aspect_ratio`, that model's `params` from config, references as in step 3. Call once with `get_cost: true` first — above `credits` × 1.2 → stop and report.
+- The server sometimes answers with a preset recommendation instead of a job ("Preset … was recommended instead of submitting a job") — nothing started and nothing was charged. Resubmit the same request with `declined_preset_id` = that preset's id (seen 15-09-2026 on all three test models).
 - `jobs_wait` until done (5–10 min), download the result to `raw.mp4`.
 - Refused (real face / moderation) → retry once with the person still as an `image_references` media instead of an Element. Refused again → log `failed`, report, stop. Never switch models on your own.
 - Check: frames at 1, 4, 7 and 9.5 s (`ffmpeg -ss <t> -i raw.mp4 -frames:v 1 frames/<t>.png`) and **Read them**. Redo once with the same prompt if the face isn't Bee, hands or limbs break, objects melt, letters or logos appear, or the clothes moment is missing. Second take also bad → log `failed`, report, stop.

@@ -1,3 +1,4 @@
-# Finished and raw videos live on the `media` branch, never on main
+# Videos live on the `media` branch; stills and frames stay local (job ids + URLs are in meta.json)
 *.mp4
 */frames/
+*/refs/

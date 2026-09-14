@@ -1,0 +1,22 @@
+{
+  "date": "15-09-2026",
+  "time": "19:00",
+  "time_source": "abc-test",
+  "mode": "draft",
+  "model": "seedance_2_5",
+  "params": {"aspect_ratio": "9:16", "duration": 10, "resolution": "1080p", "mode": "omni_reference", "generate_audio": true},
+  "refs": "image_references",
+  "credits_spent": 90,
+  "shared_stills_credits": 6,
+  "concept": "A/B/C test — Bee's street-collision prompt (reels/prompts/example-street-collision.md)",
+  "trend_urls": [],
+  "image_job_ids": {"person": "40536487-8344-4b6e-9949-50ee61a09c4d", "glasses": "5be47a65-940d-4a41-b775-b85573271ca6", "drink": "a1aa59c1-0565-4831-8cea-eb5def16df50"},
+  "video_job_id": "c25814b3-b99f-4d50-ba9d-a97a9af2cb4c",
+  "raw_video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GjWXAgkSF0SatIR32c8ih5T6Zs/hf_20260914_192903_c25814b3-b99f-4d50-ba9d-a97a9af2cb4c.mp4",
+  "video_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/3ae3b77d91d6ac9eecb91abc7800c8a02aea41ab/15-09-2026-abc-seedance_2_5.mp4",
+  "metricool_post_id": 375902470,
+  "metricool_uuid": "4936996581208113522",
+  "tiktok_post_id": null,
+  "output": {"width": 1080, "height": 1920, "fps": 24, "raw_codec": "hevc", "raw_duration": 10.05, "final_duration": 11.71},
+  "qa": "Winner. Face clearly Bee, outfit exact (white T-shirt, open light-blue linen shirt, navy chinos, white sneakers), gold aviators and the pastel lemonade can match the stills, every beat lands (walk and call, collision, slow-motion spill, amber lens moment, macro can hold). Accepted the AI still of Bee — no real-face refusal. Raw output is HEVC; endcard.py re-encodes to H.264."
+}

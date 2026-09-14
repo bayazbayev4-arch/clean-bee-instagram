@@ -1,0 +1,23 @@
+{
+  "date": "15-09-2026",
+  "time": "19:30",
+  "time_source": "abc-test",
+  "mode": "draft",
+  "model": "cinematic_studio_3_0",
+  "params": {"aspect_ratio": "9:16", "duration": 10, "resolution": "1080p", "generate_audio": true},
+  "refs": "elements",
+  "credits_spent": 100,
+  "shared_stills_credits": 6,
+  "concept": "A/B/C test — Bee's street-collision prompt (reels/prompts/example-street-collision.md)",
+  "trend_urls": [],
+  "element_ids": {"person": "9a33df16-1da8-445f-804e-10ccfeb98aaa", "glasses": "3f7de838-f9ae-436a-934c-18040cce4a90", "drink": "0e995fac-c1cb-4e52-92ae-2ed649cee9f4"},
+  "image_job_ids": {"person": "40536487-8344-4b6e-9949-50ee61a09c4d", "glasses": "5be47a65-940d-4a41-b775-b85573271ca6", "drink": "a1aa59c1-0565-4831-8cea-eb5def16df50"},
+  "video_job_id": "4c47c33c-0ba3-4900-98cb-c139862dbe1e",
+  "raw_video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GjWXAgkSF0SatIR32c8ih5T6Zs/hf_20260914_192947_4c47c33c-0ba3-4900-98cb-c139862dbe1e.mp4",
+  "video_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/b209a05b514189c3e8ca7b9020d5b9386f3195d5/15-09-2026-abc-cinematic_studio_3_0.mp4",
+  "metricool_post_id": 375902517,
+  "metricool_uuid": "2045672644451192323",
+  "tiktok_post_id": null,
+  "output": {"width": 1080, "height": 1920, "fps": 24, "raw_codec": "h264", "raw_duration": 10.1, "final_duration": 11.75},
+  "qa": "Props and physics excellent — sunglasses, can and spill match the stills, strong lens pass-through and macro hold. But Bee's face is barely visible (mostly wide shots, head turned up) and the beats are rushed: the collision comes at ~4 s and the walk-and-call moment is mostly skipped. Most expensive."
+}

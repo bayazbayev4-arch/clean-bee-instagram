@@ -1,0 +1,23 @@
+{
+  "date": "15-09-2026",
+  "time": "18:30",
+  "time_source": "abc-test",
+  "mode": "draft",
+  "model": "kling3_0",
+  "params": {"aspect_ratio": "9:16", "duration": 10, "mode": "pro", "sound": "on"},
+  "refs": "elements",
+  "credits_spent": 25,
+  "shared_stills_credits": 6,
+  "concept": "A/B/C test — Bee's street-collision prompt (reels/prompts/example-street-collision.md)",
+  "trend_urls": [],
+  "element_ids": {"person": "9a33df16-1da8-445f-804e-10ccfeb98aaa", "glasses": "3f7de838-f9ae-436a-934c-18040cce4a90", "drink": "0e995fac-c1cb-4e52-92ae-2ed649cee9f4"},
+  "image_job_ids": {"person": "40536487-8344-4b6e-9949-50ee61a09c4d", "glasses": "5be47a65-940d-4a41-b775-b85573271ca6", "drink": "a1aa59c1-0565-4831-8cea-eb5def16df50"},
+  "video_job_id": "0637c94a-510a-4495-ab8b-1b1061d46c65",
+  "raw_video_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3GjWXAgkSF0SatIR32c8ih5T6Zs/hf_20260914_192948_0637c94a-510a-4495-ab8b-1b1061d46c65.mp4",
+  "video_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/6cbf41a7237b06dbb0184c139b17a6f3b71452dd/15-09-2026-abc-kling3_0.mp4",
+  "metricool_post_id": 375900870,
+  "metricool_uuid": "4570173384601518749",
+  "tiktok_post_id": null,
+  "output": {"width": 1080, "height": 1920, "fps": 24, "raw_codec": "h264", "raw_duration": 10.04, "final_duration": 11.71},
+  "qa": "Camera moves all there (low-angle dolly on the shoes, crane-up, collision, slow-motion spill, amber lens pass-through). But the face is not Bee — a generic model — and the outfit drifted (brown dress shoes, tucked shirt, no white T-shirt); the can lost its pastel label. Cheapest of the three."
+}
