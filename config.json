@@ -3,16 +3,27 @@
   "instagram_handle": "cleanbumblebee",
   "metricool_brand_id": "6957992",
   "timezone": "Asia/Almaty",
-  "posts_per_day": 3,
-  "publish_mode": "draft",
+  "posts_per_day": 4,
+  "publish_mode": "auto",
   "auto_from": null,
-  "auto_switched": false,
+  "auto_switched": true,
+  "time_windows": [["07:00", "11:00"], ["11:00", "15:00"], ["15:00", "19:00"], ["19:00", "23:00"]],
   "min_gap_hours": 3,
-  "posting_window": ["08:00", "22:00"],
-  "fallback_times": ["09:00", "13:00", "19:30"],
-  "image_size": [1080, 1350],
+  "fallback_times": ["08:30", "12:30", "17:00", "20:30"],
+  "image_size": [1080, 1080],
   "image_host": "github-raw",
   "github_repo": "bayazbayev4-arch/clean-bee-instagram",
   "image_url_pattern": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/<folder>/image.png",
+  "cta": {
+    "target": "website",
+    "url": "cleanbumblebee.com",
+    "button_label": "Заказать на cleanbumblebee.com",
+    "caption_line": "Оформите заказ за 60 секунд на cleanbumblebee.com — ссылка в профиле."
+  },
+  "cta_app_when_live": {
+    "target": "app",
+    "button_label": "Заказать в приложении",
+    "caption_line": "Оформите заказ за 60 секунд в приложении Clean Bumble Bee — ссылка в профиле."
+  },
   "language": "ru"
 }

@@ -1,24 +1,26 @@
 # Content pillars
 
-Daily mix: **one from each group**, rotated so the same pillar doesn't appear two days running in the same slot.
+Every post must **teach something useful** — a reader should learn one concrete thing even if they never order. The service mention comes after the value, plus the website CTA.
 
-## Group A — Useful (morning slot)
-- **Care tips** — how to store a winter coat, why not to iron wool, reading care labels, getting stains out before they set.
-- **Myth vs fact** — «химчистка портит вещи», «пуховик можно только в машинке» etc.
-- **Seasonal** — Astana weather hooks: first frost → coats, spring mud → shoes (only if the service is live), blankets before winter.
+Daily mix: **4 posts, one per slot**. Don't repeat the same pillar in the same slot two days running, and never repeat an idea from `log.csv` within 30 days.
 
-## Group B — How we work (midday slot)
-- **Process** — one step of the service (pickup window, bag codes, photo at every handover, Kaspi invoice after inspection).
-- **Trust** — "you pay after we inspect", "every handover photographed".
-- **Service spotlight** — one LIVE service, what it covers, who it's for.
+## Slot a — morning (07–11): Quick care tip  → layout `tips`
+- 3 short steps/tips: storing a winter coat, washing wool, drying a down jacket, removing a coffee stain before it sets, caring for curtains, keeping bedding fresh.
+- Headline ≤ 6 words («Как хранить пальто летом»), 3 tips ≤ 7 words each.
 
-## Group C — Life & brand (evening slot)
-- **Relatable** — busy week, kids, no time; saved Saturday.
-- **Mascot moments** — the bee doing everyday chores, light humour.
-- **Soft offer** — "order tonight, pickup tomorrow" style reminder + app CTA (no invented discounts).
+## Slot b — midday (11–15): Myth vs fact / label decoder  → layout `fact`
+- «Химчистка портит вещи?» → fact. Care-label symbols explained. Why dry cleaning suits wool, silk, structured coats.
+- Tie to the matching service tint.
 
-## Formats (static)
-- Photo + big headline (most posts)
-- Checklist / 3 tips card
-- Myth vs fact split card
-- Quote-style tip on a pastel background
+## Slot c — afternoon (15–19): How Clean Bumble Bee works  → layout `tips` or `fact`
+- One step of the service in plain words: 2-hour pickup window, bag codes, photo at every handover, pay after inspection by Kaspi invoice, tracking online.
+- Trust and transparency — no numbers unless read live.
+
+## Slot d — evening (19–23): Seasonal / lifestyle value  → layout `photo`
+- Astana seasons: first cold → coats and duvets, spring → curtains and blankets, holidays → special outfits.
+- "Free your weekend" angle with a real tip inside. High-key photo from Higgsfield.
+
+## Rules for every post
+- One idea per image. Headline ≤ 6 words. Use a live service's icon + tint when the topic matches it.
+- Caption: hook line → 3–5 useful sentences or a short list → `config.cta.caption_line` → hashtags.
+- The image's bottom button always carries `config.cta.button_label` (website now; switch `cta` to `cta_app_when_live` when the app is in the App Store).

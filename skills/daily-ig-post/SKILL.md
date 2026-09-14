@@ -1,72 +1,79 @@
 ---
 name: daily-ig-post
-description: Make and schedule tomorrow's 3 static Instagram posts for Clean Bumble Bee (Astana dry cleaning) — pick ideas, generate backgrounds with Higgsfield, render Russian text + logo with compose.py, save to posts/, schedule in Metricool at its best times (draft or live per config.json), log everything. Use for the daily routine or when Bee says "make tomorrow's posts" / "make a Clean Bee post".
+description: Make and schedule tomorrow's 4 static, informative Instagram posts for Clean Bumble Bee (Astana dry cleaning) — pick useful ideas, render on-brand 1080×1080 images with compose.py (Higgsfield only for photo backgrounds), save to posts/, schedule in Metricool at the peak hour of each time window from its best-time heat map, log everything. Use for the daily routine or when Bee says "make tomorrow's posts" / "make a Clean Bee post".
 ---
 
 # Daily Instagram posts — Clean Bumble Bee
 
-Paths are relative to the `Clean Bee Instagram/` folder. Read `CLAUDE.md`, `MEMORY.md`, `config.json`, `brand/brand.md`, `plan/pillars.md` first.
+Paths are relative to the `Clean Bee Instagram/` folder. Read `CLAUDE.md`, `MEMORY.md`, `config.json`, `brand/brand.md`, `plan/pillars.md` first. `brand/brand.md` is the brand guideline summary — follow it.
 
 ## 0. Date and mode
 - Target date = **tomorrow** in `config.timezone` (unless Bee names a date).
-- If `posts/` already has 3 folders for the target date, or `log.csv` has 3 non-failed rows for it → stop, report "already done".
-- `publish_mode`:
-  - `auto_from` is null → set it to today + 14 days (DD-MM-YYYY), write `config.json`.
-  - today ≥ `auto_from` and `publish_mode` is `"draft"` → switch to `"auto"`, write `config.json`, note the switch in `MEMORY.md`.
-  - Bee setting `publish_mode` back to `"draft"` by hand wins — only auto-switch once (record `"auto_switched": true` in config).
+- `publish_mode`: `"auto"` → posts go live at their time. `"draft"` → Metricool drafts. Bee sets it; don't change it.
+- `getScheduledPosts` for the target date. If it already has `posts_per_day` posts → stop, report "already done". Otherwise fill only the missing slots.
 
-## 1. Check what's allowed to be promoted
-- Fetch https://cleanbumblebee.com/uslugi-i-tseny. Services with «Скоро» are off-limits. Note live prices only if you'll use them.
-- Fetch fails → no service-offer posts today; use tips / relatable / process posts only.
+## 1. What may be promoted
+- Fetch https://cleanbumblebee.com/uslugi-i-tseny. Services with «Скоро» are off-limits for offers. Read any number you plan to use (price, fee, threshold, turnaround) from this page in this run.
+- Fetch fails → no service offers and no numbers; general care tips + how-it-works posts only.
 
-## 2. Pick 3 ideas
-- If `plan/calendar.csv` has rows for the target date, use them.
-- Otherwise one idea per group from `plan/pillars.md` (A morning, B midday, C evening).
-- Reject anything whose idea is in `log.csv` in the last 30 days. Vary the layout: at least one `photo` and one `card` per day.
-- For each: pillar, idea, headline (≤ 7 words, Russian), subline (≤ 12 words), caption, layout.
+## 2. Pick 4 ideas
+- Rows in `plan/calendar.csv` for the target date win. Otherwise one idea per slot from `plan/pillars.md` (a morning tip, b myth/fact, c how it works, d seasonal photo).
+- Reject ideas already in `log.csv` in the last 30 days.
+- Every post must teach something concrete. Headline ≤ 6 words. Tips ≤ 7 words each.
 
-## 3. Times — Metricool best times
-- `getBestTimeToPostByNetwork`: `brandId` = `config.metricool_brand_id`, `socialNetwork` `instagram`, `timezone` `Asia/Almaty`, from/to = target date 00:00–23:59 `+05:00`. (If the id is null: `getBrandSettings`, find `cleanbumblebee`, save its `id`.)
-- All values 0 = no data yet (new account) → use `fallback_times`.
-- Choose the 3 highest-scoring hours inside `posting_window`, at least `min_gap_hours` apart; earliest → group A, middle → B, latest → C.
-- No data (new account) → `fallback_times`. Record which source was used in `meta.json`.
+## 3. Times — peak of each window (Metricool heat map)
+- `getBestTimeToPostByNetwork`: `brandId` = `config.metricool_brand_id`, `socialNetwork` `instagram`, `timezone` `Asia/Almaty`, from/to = target date 00:00–23:59 `+05:00`. The response is Metricool's heat map: a value per hour, higher = better.
+- For each of the 4 `time_windows`, take the hour with the highest value → slots a, b, c, d. If two picks are closer than `min_gap_hours`, move the later one to its window's next-best hour.
+- A window whose values are all 0 → that slot's `fallback_times` entry. Record `time_source` (`heatmap` / `fallback`) in `meta.json`.
 
-## 4. Make each image
-1. **Background (photo layout)** — Higgsfield `generate_image`, portrait 4:5 (or 3:4 then crop), prompt in English: bright clean real-life scene tied to the idea (Astana apartment, coat on a hanger, folded linen, courier at a door), soft daylight, brand pastels (blue #0690F1 / light blue #BAEBFF / yellow #FFD16F accents), lots of empty space in the lower third, **"no text, no letters, no logos"**. Download the result to the post folder as `bg.png`.
-2. **Card layout** — no generation. Pick `--bgcolor` from the pastels in `brand/brand.md`, `--icon` = the live service's icon from `brand/services/` or `brand/cbb-mascot.png`.
-3. Render:
-   ```
-   python3 skills/daily-ig-post/scripts/compose.py --layout photo --bg posts/<folder>/bg.png \
-     --headline "…" --sub "…" --out posts/<folder>/image.png
-   ```
-4. **Look at `image.png`** (Read it). Reject and redo (max 2 retries) if: text overflows or is hard to read, the model drew fake letters/logos, faces/hands look wrong, it looks dark or gloomy.
+## 4. Make each image — `scripts/compose.py`
+Never let an image model draw text. Pick the layout from the pillar:
 
-Folder name: `posts/DD-MM-YYYY-<a|b|c>-<short-latin-slug>/`.
+| Layout | Use | Key args |
+|---|---|---|
+| `tips` | 3 quick steps/tips | `--headline`, `--tips "…|…|…"`, `--tint`, `--icon` |
+| `fact` | myth vs fact, label decoder, one clear message | `--eyebrow "МИФ"`, `--headline`, `--sub`, `--tint`, `--icon` |
+| `photo` | seasonal / lifestyle | `--bg`, `--headline`, `--sub` |
+
+All layouts add the official logo on top and the Safe Blue CTA button (`--button` = `config.cta.button_label`) at the bottom.
+- `--tint` + `--icon`: the service's pastel and icon from the table in `brand/brand.md`; general tips → `#BAEBFF` + the closest service icon.
+- **Photo backgrounds:** Higgsfield `generate_image`, aspect 1:1 (or 4:3 — compose crops), English prompt following brand.md → Photography, ending with "no text, no letters, no logos, no watermark". Wait for the job, download `result_url` to `posts/<folder>/bg.png`. Download blocked → switch that slot to `fact` instead of failing.
+
+```
+python3 skills/daily-ig-post/scripts/compose.py --layout tips --tint "#94EBE5" \
+  --icon brand/services/dry-cleaning.png --headline "Как хранить пальто летом" \
+  --tips "Почистите перед хранением|Используйте дышащий чехол|Держите вдали от солнца" \
+  --button "Заказать на cleanbumblebee.com" --out posts/<folder>/image.png
+```
+
+**Look at every `image.png`** (Read it). Redo (max 2 tries) if text is cut, cramped or hard to read, the photo is dark/cluttered, or the model drew letters/logos.
+
+Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 
 ## 5. Caption — `caption.md`
-- Russian, 40–120 words, rules from `brand/brand.md` → Voice.
-- Hook line first, value in the middle, one CTA last, then 5–8 hashtags.
-- Facts only from "How it works" and the live prices page.
+- Russian, 50–130 words, voice rules in `brand/brand.md`.
+- Hook line → the useful content (3–5 sentences or a short list with «—») → `config.cta.caption_line` → 5–8 hashtags.
+- Facts only from brand.md → "Facts you may state" and numbers read live in step 1.
 
-## 6. Host the image
-- Metricool needs a public image URL. Use the method in `config.image_host` (set once Bee decides). If null → stop before scheduling, report that hosting isn't configured.
+## 6. Publish the image
+- `git add posts && git commit -m "posts: <date>" && git push`.
+- Image URL = `config.image_url_pattern` with the folder. Confirm HTTP 200 (`curl -sI`) before scheduling; raw GitHub can lag ~1 min, retry.
 
 ## 7. Schedule in Metricool
-- Before creating, `getScheduledPosts` for the target date — skip any slot that already has a post (no duplicates on re-runs).
-- `createScheduledPost` with `blogId` = `config.metricool_brand_id`, `date` = ISO with `+05:00`, and `info` JSON:
-  ```json
-  {"autoPublish": true, "draft": <true if publish_mode is "draft">, "descendants": [], "firstCommentText": "",
-   "hasNotReadNotes": false, "media": ["<public image URL>"], "mediaAltText": ["<short Russian description>"],
-   "providers": [{"network": "instagram"}], "publicationDate": {"dateTime": "YYYY-MM-DDTHH:MM:00", "timezone": "Asia/Almaty"},
-   "shortener": false, "smartLinkData": {"ids": []}, "text": "<caption>",
-   "instagramData": {"type": "POST", "isAiGenerated": <true if the background came from Higgsfield>}}
-  ```
-- Do NOT use `createScheduledPostForReview` — it needs a team plan and emails reviewers.
+`createScheduledPost` with `blogId` = `config.metricool_brand_id`, `date` = ISO with `+05:00`, `info`:
+```json
+{"autoPublish": true, "draft": <publish_mode == "draft">, "descendants": [], "firstCommentText": "",
+ "hasNotReadNotes": false, "media": ["<image URL>"], "mediaAltText": ["<short Russian description>"],
+ "providers": [{"network": "instagram"}], "publicationDate": {"dateTime": "YYYY-MM-DDTHH:MM:00", "timezone": "Asia/Almaty"},
+ "shortener": false, "smartLinkData": {"ids": []}, "text": "<caption>",
+ "instagramData": {"type": "POST", "isAiGenerated": <true only if a Higgsfield photo is used>}}
+```
+Metricool copies the image to its own storage on creation. Don't use `createScheduledPostForReview`.
 
 ## 8. Save + log
-- `meta.json`: date, slot, time, time_source, pillar, idea, layout, higgsfield_prompt, higgsfield_url, image_url, metricool_post_id, mode.
-- Append a row to `log.csv` (status `scheduled`, `draft` or `failed` + reason).
-- If running in the cloud repo: `git add posts log.csv config.json MEMORY.md && git commit -m "posts: <target date>" && git push`.
+- `meta.json`: date, slot, time, time_source, pillar, idea, layout, higgsfield_prompt, image_url, metricool_post_id, mode.
+- Append one row per post to `log.csv` (status `scheduled` / `draft` / `failed` + reason). Note anything learned in `MEMORY.md`.
+- Commit and push.
 
-## 9. Report (short)
-Target date, the 3 times, headline of each, mode, anything that failed. In draft mode end with: "3 drafts waiting in Metricool for approval."
+## 9. Report
+Russian, short: date, 4 times + headlines, live or draft, failures.

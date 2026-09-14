@@ -1,0 +1,13 @@
+{
+  "date": "15-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback (Metricool heat map all zero — new account)",
+  "pillar": "Seasonal",
+  "idea": "Clean curtains, throws and bedspreads before heating season",
+  "layout": "photo",
+  "higgsfield_prompt": "High-key bright photograph of a fresh minimalist Scandinavian-style living room ... no text, no letters, no logos, no watermark (gpt_image_2_5, 4:3)",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/15-09-2026-d-home-before-winter/image.png",
+  "metricool_post_id": null,
+  "mode": "auto"
+}

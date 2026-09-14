@@ -3,14 +3,14 @@
 Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with courier pickup/delivery in **Astana** (app built in `App Developer/niches/dry-cleaning/clean-bee/`). Not Bee's personal brand — that lives in `Head of Marketing/Content/`.
 
 ## The job
-- **3 static image posts every day**, scheduled into Metricool at that day's best times (Metricool's own best-time data for this account).
+- **4 static, informative image posts every day** — spread over morning, midday, afternoon and evening, each at the peak hour of its window on Metricool's best-time heat map.
+- Every post teaches something useful, follows the brand guideline (`brand/brand.md`) and points to the website (later the app — `config.json` → `cta`).
 - A cloud routine runs the `skills/daily-ig-post/SKILL.md` skill every evening at **21:00 Astana** and fills the **next** day.
 - Every post is saved in `posts/DD-MM-YYYY-slot-slug/` and logged in `log.csv`.
 
 ## Publishing mode (Bee's decision, 14-09-2026)
-- **Weeks 1–2: drafts.** Posts go into Metricool as drafts; Bee approves each one in Metricool.
-- **After 14 days: automatic.** `config.json` → `auto_from` is set on the first run (first run date + 14 days). From that date posts are scheduled live. This is an explicit exception to the root "never post without confirmation" rule — Bee approved it.
-- Bee can flip back anytime: set `publish_mode` to `"draft"` in `config.json`.
+- **Fully automatic.** Posts are scheduled live with no approval step. Bee explicitly approved this on 14-09-2026 ("I trust it") — a standing exception to the root "never post without confirmation" rule, for this Instagram only.
+- Bee can switch back anytime: set `publish_mode` to `"draft"` in `config.json`.
 
 ## Hard rules
 - **Only promote services that are live.** Check https://cleanbumblebee.com/uslugi-i-tseny before each run — anything with the «Скоро» badge is off-limits. If the page can't be read, post brand/tips content only, no service offers.
