@@ -1,0 +1,18 @@
+{
+  "brand": "Clean Bumble Bee",
+  "instagram_handle": "cleanbumblebee",
+  "metricool_brand_id": "6957992",
+  "timezone": "Asia/Almaty",
+  "posts_per_day": 3,
+  "publish_mode": "draft",
+  "auto_from": null,
+  "auto_switched": false,
+  "min_gap_hours": 3,
+  "posting_window": ["08:00", "22:00"],
+  "fallback_times": ["09:00", "13:00", "19:30"],
+  "image_size": [1080, 1350],
+  "image_host": "github-raw",
+  "github_repo": "bayazbayev4-arch/clean-bee-instagram",
+  "image_url_pattern": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/<folder>/image.png",
+  "language": "ru"
+}

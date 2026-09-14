@@ -1,0 +1,28 @@
+<svg viewBox="0 0 72 72" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+  <!-- Clean Bumble Bee UI icon: a bee whose body is a stack of folded laundry.
+       Used for in-app buttons, service tiles and illustrative accents. -->
+  <g stroke="#1E2B94" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- antennae, to the right -->
+    <path d="M46 28 C50 21 54 17 58 15" fill="none"/>
+    <path d="M52 29 C57 24 61 21 65 20" fill="none"/>
+
+    <!-- wings -->
+    <ellipse cx="27" cy="23" rx="11" ry="7.5" transform="rotate(-32 27 23)" fill="#FEE5AE"/>
+    <ellipse cx="41" cy="21" rx="10.5" ry="7" transform="rotate(-8 41 21)" fill="#FEE5AE"/>
+
+    <!-- folded laundry stack = body -->
+    <rect x="12" y="32" width="48" height="11" rx="5.5" fill="#FFD16F"/>
+    <rect x="12" y="45.5" width="48" height="11" rx="5.5" fill="#FEE5AE"/>
+    <rect x="12" y="59" width="48" height="11" rx="5.5" fill="#FFD16F"/>
+  </g>
+
+  <!-- fold lines -->
+  <g stroke="#1E2B94" stroke-width="2.4" stroke-linecap="round">
+    <path d="M42 37.5 h11"/>
+    <path d="M42 51 h11"/>
+    <path d="M42 64.5 h11"/>
+  </g>
+
+  <circle cx="59" cy="14" r="3.2" fill="#1E2B94"/>
+  <circle cx="66" cy="19.4" r="3.2" fill="#1E2B94"/>
+</svg>
