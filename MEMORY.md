@@ -12,7 +12,9 @@
 - **Clean Bumble Bee opens 28-09-2026** (Bee). Bio in `brand/instagram-bio.md` — swap to the "after opening" version that day. Live offers 14-09: −25% on everything until 31.12, first order free pickup/delivery, then free from 10 000 ₸ (500 ₸/trip otherwise).
 - Public repo bayazbayev4-arch/clean-bee-instagram (images served from raw.githubusercontent.com). Cloud routine **trig_01BPXHcuLGJnHNtob7Jbykmv**, cron `0 16 * * *` UTC = 21:00 Astana.
 - 15-09-2026: 4 live posts made by hand from the local session (Metricool ids 375498575, 375499113, 375498777, 375498902).
-- **Routine blocked (first run 14-09-2026):** (1) `git push` 403 — the Claude GitHub App has no access to this repo; (2) the cloud environment's network blocks the Higgsfield CDN (d8j0ntlcm91z4.cloudfront.net) and cleanbumblebee.com. Both need Bee's settings change before nightly runs work.
+- **Routine blocked (first run 14-09-2026):** (1) `git push` 403 — the Claude GitHub App was never installed on Bee's GitHub account; (2) the cloud environment's network blocked the Higgsfield CDN and cleanbumblebee.com.
+  - (2) FIXED 14-09-2026: Default cloud environment → Network access **Custom**, allowed `d8j0ntlcm91z4.cloudfront.net` + `cleanbumblebee.com`, "include default list" kept on (keeps the Trusted list; GitHub and MCP traffic bypass the allowlist anyway).
+  - (1) PENDING: Claude GitHub App install prepared with "Only select repositories → clean-bee-instagram", stopped at GitHub's "Confirm access → Verify via email" (sudo mode) — Bee must verify and click Install & Authorize himself.
 
 ## Output
 - 1080×1080 PNG (guideline Instagram feed spec). Layouts `tips` / `fact` / `photo` in compose.py; official logo on top, Astana chip, Safe Blue CTA pill at the bottom.
