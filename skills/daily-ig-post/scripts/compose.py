@@ -302,8 +302,17 @@ def main():
     if args.layout == "tips" and not args.tips:
         p.error("--tips is required for the tips layout")
     build = {"tips": layout_tips, "fact": layout_fact, "photo": layout_photo}[args.layout]
-    build(args).save(args.out, "PNG", optimize=True)
+    image = build(args)
+    image.save(args.out, "PNG", optimize=True)
+    # TikTok photo posts reject PNG ("use 'image/jpeg' or 'image/webp'"), so every post also gets a JPEG twin.
+    jpg = os.path.splitext(args.out)[0] + ".jpg"
+    if image.mode != "RGB":
+        flat = Image.new("RGB", image.size, WHITE)
+        flat.paste(image.convert("RGBA"), mask=image.convert("RGBA").getchannel("A"))
+        image = flat
+    image.save(jpg, "JPEG", quality=92, subsampling=0, optimize=True)
     print(args.out)
+    print(jpg)
 
 
 if __name__ == "__main__":

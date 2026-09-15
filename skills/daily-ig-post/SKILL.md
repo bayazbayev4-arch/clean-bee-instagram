@@ -56,8 +56,9 @@ Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 - Facts only from brand.md → "Facts you may state" and numbers read live in step 1.
 
 ## 6. Publish the image
+- `compose.py` writes `image.png` (Instagram) and `image.jpg` (TikTok — it rejects PNG with "The 'image/png' type is not allowed, use 'image/jpeg' or 'image/webp'"). A folder without `image.jpg` → `python3 -c "from PIL import Image; Image.open('posts/<folder>/image.png').convert('RGB').save('posts/<folder>/image.jpg', quality=92, subsampling=0)"`.
 - `git add posts && git commit -m "posts: <date>" && git push`.
-- Image URL = `config.image_url_pattern` with the folder. Confirm HTTP 200 (`curl -sI`) before scheduling; raw GitHub can lag ~1 min, retry.
+- Image URLs = `config.image_url_pattern` (PNG, Instagram) and `config.tiktok_image_url_pattern` (JPEG, TikTok) with the folder. Confirm both return HTTP 200 (`curl -sI`) before scheduling; raw GitHub can lag ~1 min, retry.
 
 ## 7. Schedule in Metricool
 `createScheduledPost` with `blogId` = `config.metricool_brand_id`, `date` = ISO with `+05:00`, `info`:
@@ -70,7 +71,7 @@ Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 ```
 Metricool copies the image to its own storage on creation. Don't use `createScheduledPostForReview`.
 
-**TikTok (Bee, 14-09-2026 — feed posts only, never stories):** for every post in `config.networks` beyond Instagram, make a **second, separate** `createScheduledPost` with the same date, image and caption, `"providers": [{"network": "tiktok"}]`, no `instagramData`, and:
+**TikTok (Bee, 14-09-2026 — feed posts only, never stories):** for every post in `config.networks` beyond Instagram, make a **second, separate** `createScheduledPost` with the same date and caption and the **JPEG** image URL (`config.tiktok_image_url_pattern` — a PNG fails with "The 'image/png' type is not allowed"), `"providers": [{"network": "tiktok"}]`, no `instagramData`, and:
 ```json
 "tiktokData": {"title": "<headline, max 90 chars>", "privacyOption": "PUBLIC_TO_EVERYONE", "disableComment": false, "disableDuet": false, "disableStitch": false, "autoAddMusic": true, "photoCoverIndex": 0, "commercialContentThirdParty": false, "commercialContentOwnBrand": true, "isAigc": false}
 ```

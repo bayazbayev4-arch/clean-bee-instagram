@@ -16,6 +16,7 @@
   "image_host": "github-raw",
   "github_repo": "bayazbayev4-arch/clean-bee-instagram",
   "image_url_pattern": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/<folder>/image.png",
+  "tiktok_image_url_pattern": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/<folder>/image.jpg",
   "cta": {
     "target": "website",
     "url": "cleanbumblebee.com",
