@@ -1,0 +1,14 @@
+{
+  "date": "17-09-2026",
+  "slot": "a",
+  "time": "08:30",
+  "time_source": "fallback (Metricool heat map all zero)",
+  "pillar": "Care tip",
+  "idea": "How to hand-wash a wool sweater",
+  "layout": "tips",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/17-09-2026-a-wool-sweater/image.png",
+  "metricool_post_id": null,
+  "tiktok_post_id": null,
+  "mode": "auto"
+}
