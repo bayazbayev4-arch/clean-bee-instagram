@@ -40,8 +40,10 @@
     "min_gap_from_feed_minutes": 60,
     "credit_reserve": 60,
     "person_element_id": "c30f4ede-92d6-406d-b24e-0c3a3231fa55",
-    "logo_element_id": "ccff7494-8cd1-485e-be1a-cd7f4c536c31",
-    "logo_file": "brand/logos/stacked-centred.png",
+    "logo_element_id": "e669ecfd-37e7-40ea-a2e8-6bd7404fc182",
+    "logo_file": "brand/logos/stacked-centred-transparent.png",
+    "logo_dark_element_id": "12f98190-543c-4eb6-ab06-043f5cd6e602",
+    "logo_dark_file": "brand/logos/horizontal-inverse-transparent.png",
     "models": {
       "kling3_0": {"credits": 25, "refs": "elements", "params": {"duration": 10, "mode": "pro", "sound": "on"}},
       "seedance_2_5": {"credits": 90, "refs": "image_references", "params": {"duration": 10, "resolution": "1080p", "mode": "omni_reference", "generate_audio": true}},

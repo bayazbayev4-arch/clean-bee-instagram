@@ -23,7 +23,7 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 - Never repeat an idea already in `log.csv` within 30 days.
 - Text on images is rendered by `scripts/compose.py`, never by the image model (AI mangles Cyrillic).
 - Never write into another role's folders. Brand assets here are copies — the source of truth is the app repo's `public/brand/`.
-- **Branded props yes, fake service items no** (Bee, 14-09 and 15-09-2026). In AI Reels, everyday props (cans, cups, bottles, totes, umbrellas, Bee's clothes) carry the official logo where natural — always applied through a reference still made from the real logo file, never drawn from words. Branded bags, garment covers, wrap and courier uniforms don't exist yet, so never show them. Feed images get the logo only through `compose.py`.
+- **Branded props yes, fake service items no** (Bee, 14-09 and 15-09-2026). In AI Reels, everyday props (cans, cups, bottles, totes, umbrellas, Bee's clothes) carry the official logo where natural — always applied through a reference still made from the transparent logo files (`brand/logos/stacked-centred-transparent.png` on light surfaces, `brand/logos/horizontal-inverse-transparent.png` on dark ones) and printed straight onto the prop with no white box, panel or sticker (Bee, 15-09-2026) — never drawn from words. Branded bags, garment covers, wrap and courier uniforms don't exist yet, so never show them. Feed images get the logo only through `compose.py`.
 
 ## Files
 | Path | What |
