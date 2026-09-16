@@ -71,11 +71,13 @@ Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 ```
 Metricool copies the image to its own storage on creation. Don't use `createScheduledPostForReview`.
 
-**TikTok (Bee, 14-09-2026 — feed posts only, never stories):** for every post in `config.networks` beyond Instagram, make a **second, separate** `createScheduledPost` with the same date and caption and the **JPEG** image URL (`config.tiktok_image_url_pattern` — a PNG fails with "The 'image/png' type is not allowed"), `"providers": [{"network": "tiktok"}]`, no `instagramData`, and:
+**Extra networks (TikTok since 14-09-2026, Facebook since 16-09-2026 — feed posts only; stories are handled by the story skill):** for every network in `config.networks` beyond Instagram, make one **separate** `createScheduledPost` with the same date and caption and the **JPEG** image URL (`config.tiktok_image_url_pattern` — a PNG fails with "The 'image/png' type is not allowed"), `"providers": [{"network": "tiktok"}]`, no `instagramData`, and:
 ```json
 "tiktokData": {"title": "<headline, max 90 chars>", "privacyOption": "PUBLIC_TO_EVERYONE", "disableComment": false, "disableDuet": false, "disableStitch": false, "autoAddMusic": true, "photoCoverIndex": 0, "commercialContentThirdParty": false, "commercialContentOwnBrand": true, "isAigc": false}
 ```
-Separate posts keep one network's error from blocking the other. When counting "already done" for a date, count Instagram posts only (`instagramData.type == "POST"` with an instagram provider); if Instagram is full but a TikTok copy is missing, add just the TikTok copy. Log both ids in `meta.json` (`metricool_post_id`, `tiktok_post_id`).
+**Facebook:** the same again — same date, caption and JPEG URL, `"providers": [{"network": "facebook"}]`, no `instagramData` or `tiktokData`, and `"facebookData": {"type": "POST"}`.
+
+Separate posts keep one network's error from blocking the others. When counting "already done" for a date, count Instagram posts only (`instagramData.type == "POST"` with an instagram provider); if Instagram is full but a TikTok or Facebook copy is missing, add just the missing copy. Log every id in `meta.json` (`metricool_post_id`, `tiktok_post_id`, `facebook_post_id`).
 
 ## 8. Save + log
 - `meta.json`: date, slot, time, time_source, pillar, idea, layout, higgsfield_prompt, image_url, metricool_post_id, mode.

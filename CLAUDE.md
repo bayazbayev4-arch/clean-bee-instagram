@@ -5,7 +5,7 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 ## The job
 - **4 static, informative image posts every day** — spread over morning, midday, afternoon and evening, each at the peak hour of its window on Metricool's best-time heat map.
 - Every post teaches something useful, follows the brand guideline (`brand/brand.md`) and points to the website (later the app — `config.json` → `cta`).
-- **TikTok too (Bee, 14-09-2026):** every feed post is also published to TikTok (`cleanbumblebee`) as a photo post — same image, caption and time. **Stories stay Instagram-only.**
+- **TikTok and Facebook too (Bee, 14-09 and 16-09-2026):** every feed post also goes to TikTok (`cleanbumblebee`, JPEG photo post) and to the Facebook page — same image, caption and time, one separate Metricool post per network. **Stories go to Instagram and Facebook** (`config.story_networks`).
 - **Reusable stories on repeat** — `stories/` + `stories/schedule.json`; `skills/story-rotation/SKILL.md` keeps the next 7 days scheduled.
 - A cloud routine runs every evening at **21:00 Astana**: first the story rotation, then `skills/daily-ig-post/SKILL.md` for the **next** day's feed posts.
 - Every post is saved in `posts/DD-MM-YYYY-slot-slug/` and logged in `log.csv`.
