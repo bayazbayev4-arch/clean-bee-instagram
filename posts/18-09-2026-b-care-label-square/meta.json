@@ -1,0 +1,15 @@
+{
+  "date": "18-09-2026",
+  "slot": "b",
+  "time": "12:30",
+  "time_source": "fallback (Metricool heat map all zero)",
+  "pillar": "Care-label decoder",
+  "idea": "Square-with-circle symbol means tumble drying allowed",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/18-09-2026-b-care-label-square/image.png",
+  "metricool_post_id": "377626716",
+  "tiktok_post_id": "377626747",
+  "facebook_post_id": "377626782",
+  "mode": "auto"
+}
