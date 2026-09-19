@@ -1,0 +1,42 @@
+{
+  "date": "20-09-2026",
+  "shortlist": [
+    {
+      "url": "https://www.instagram.com/reel/DbvLqQ9Mz9M/",
+      "views": 2130364,
+      "date": "2026-08-07",
+      "format": "One unbroken orbiting/flying camera move around a subject; mid-move, without a cut, the object in frame changes (car parts swap, subject/object replace) — the transformation reads as magic because the camera never stops.",
+      "fit": 3
+    },
+    {
+      "url": "https://www.instagram.com/reel/DW4GLhIjOA4/",
+      "views": 4230541,
+      "date": "2026-04-08",
+      "format": "Seedance showcase: single continuous shot, no cut, used purely to prove model consistency across a transformation.",
+      "fit": 2
+    },
+    {
+      "url": "https://www.instagram.com/reel/Dah2lZ0xOhW/",
+      "views": 698693,
+      "date": "2026-07-08",
+      "format": "A static-feeling frame suddenly gains motion/energy and a dramatic reveal happens within it — 'you wouldn't believe this started as one picture'.",
+      "fit": 2
+    },
+    {
+      "url": "https://www.tiktok.com/@promptcraft.lab/video/7684838469532650759",
+      "views": 28403,
+      "date": "2026-09-16",
+      "format": "'Storm' trend — face/subject swap while the original clip's camera movement, pacing and cuts are kept identical.",
+      "fit": 2
+    },
+    {
+      "url": "https://www.tiktok.com/@artivient/video/7684790973053930773",
+      "views": 584924,
+      "date": "2026-09-12",
+      "format": "Aifilmmaking short with a comic mid-shot twist/gag revealed without a cut.",
+      "fit": 1
+    }
+  ],
+  "chosen": "https://www.instagram.com/reel/DbvLqQ9Mz9M/",
+  "note": "Borrowed only the camera-move/no-cut-transformation format, not any shot, audio, people or brand from the source video."
+}

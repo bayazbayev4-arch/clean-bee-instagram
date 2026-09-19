@@ -1,0 +1,31 @@
+{
+  "date": "20-09-2026",
+  "time_source": "fallback",
+  "mode": "live",
+  "model": "seedance_2_5",
+  "credits_spent": 0,
+  "trend_urls": [
+    "https://www.instagram.com/reel/DbvLqQ9Mz9M/",
+    "https://www.tiktok.com/@promptcraft.lab/video/7684838469532650759",
+    "https://www.instagram.com/reel/Dah2lZ0xOhW/"
+  ],
+  "element_ids": {
+    "person": "c30f4ede-92d6-406d-b24e-0c3a3231fa55",
+    "logo_light": "e669ecfd-37e7-40ea-a2e8-6bd7404fc182"
+  },
+  "image_job_ids": {
+    "person": "3713aca5-5952-483e-8be8-5382b9237da3",
+    "mug": "49d9fa33-f7e1-47c1-8a9b-51d1a3caf565"
+  },
+  "branded_props": ["mug (navy logo, light ceramic surface)"],
+  "video_job_id": null,
+  "video_url": null,
+  "metricool_post_id": null,
+  "tiktok_post_id": null,
+  "qa": {
+    "person_still": "sharp face, full body, no letters/logos, hands look intact",
+    "mug_still": "logo matches brand/logos/stacked-centred-transparent.png exactly, no box/panel/sticker, printed straight onto ceramic"
+  },
+  "status": "stopped_before_video",
+  "stop_reason": "generate_video get_cost for seedance_2_5 at the config params (1080p, 9:16, omni_reference) returned 120 credits — above config credits(90) x 1.2 = 108, the SKILL step-5 gate. Diagnosed: cost is resolution-driven only (720p priced at 70, unaffected by ref count 1 vs 2 or generate_audio true/false); the 1080p price itself has risen from 90 to 120 credits since 15-09-2026. Per SKILL/config hard limits, did not switch to 720p or otherwise route around config on my own judgment — stopped and reporting instead."
+}
