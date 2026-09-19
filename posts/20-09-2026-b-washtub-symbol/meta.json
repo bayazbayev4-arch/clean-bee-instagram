@@ -1,0 +1,16 @@
+{
+  "date": "20-09-2026",
+  "slot": "b",
+  "time": "12:30",
+  "time_source": "fallback",
+  "pillar": "Care-label decoder",
+  "idea": "Washtub symbol: plain = machine wash, crossed-out = no home washing, professional cleaning only",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/20-09-2026-b-washtub-symbol/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/20-09-2026-b-washtub-symbol/image.jpg",
+  "metricool_post_id": 378623420,
+  "tiktok_post_id": 378623480,
+  "facebook_post_id": 378623622,
+  "mode": "auto"
+}
