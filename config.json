@@ -47,7 +47,7 @@
     "logo_dark_file": "brand/logos/horizontal-inverse-transparent.png",
     "models": {
       "kling3_0": {"credits": 25, "refs": "elements", "params": {"duration": 10, "mode": "pro", "sound": "on"}},
-      "seedance_2_5": {"credits": 90, "refs": "image_references", "params": {"duration": 10, "resolution": "1080p", "mode": "omni_reference", "generate_audio": true}},
+      "seedance_2_5": {"credits": 120, "refs": "image_references", "params": {"duration": 10, "resolution": "1080p", "mode": "omni_reference", "generate_audio": true}},
       "cinematic_studio_3_0": {"credits": 100, "refs": "elements", "params": {"duration": 10, "resolution": "1080p", "generate_audio": true}}
     },
     "media_branch": "media",
