@@ -37,7 +37,7 @@
     }
   },
   "language": "ru",
-  "slide_languages": ["ru"],
+  "slide_languages": ["ru", "kk", "en"],
   "reels": {
     "enabled": true,
     "model": "seedance_2_5",
