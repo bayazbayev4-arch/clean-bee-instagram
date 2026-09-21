@@ -9,9 +9,13 @@
   "higgsfield_prompt": "High-key natural morning light through a large window in a fresh Scandinavian-style modern Astana apartment. A neatly pressed navy school blazer and crisp white shirt laid flat on a white bed, a canvas school backpack and a few folded notebooks nearby, soft pastel sky-blue and white tones, Baiterek tower visible through the window in the background, minimalist bright interior, cheerful airy atmosphere, photography, no text, no letters, no logos, no watermark",
   "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/22-09-2026-d-school-uniforms/image.png",
   "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/22-09-2026-d-school-uniforms/image.jpg",
-  "metricool_post_id": null,
-  "tiktok_post_id": null,
-  "facebook_post_id": null,
+  "metricool_post_id": 379527479,
+  "tiktok_post_id": 379527583,
+  "facebook_post_id": 379527644,
   "mode": "auto",
-  "slides": ["image.png", "image-kk.png", "image-en.png"]
+  "slides": [
+    "image.png",
+    "image-kk.png",
+    "image-en.png"
+  ]
 }
