@@ -1,0 +1,15 @@
+{
+  "date": "22-09-2026",
+  "note": "TikTok scraper (apidojo/tiktok-scraper) returned noResults:true for all 4 keywords (seedance, kling ai, higgsfield, ai video) this run — possible scraper/quota issue, see MEMORY.md. Shortlist below is Instagram only (data-slayer/instagram-search-reels), 3 queries.",
+  "shortlist": [
+    {"url": "https://www.instagram.com/reel/DdAJ_uaIXJ1/", "views": 124782592, "date": "07-09-2026", "format": "single unbroken immersive POV shot, camera plunges toward viewer with no cut, calm readable framing throughout", "fit": 2},
+    {"url": "https://www.instagram.com/reel/DdP4gu6tGMk/", "views": 14085292, "date": "14-09-2026", "format": "one continuous pour shot where the object visibly changes state mid-move, no cut — same device as the coffee-reset concept's orbiting reveal", "fit": 3},
+    {"url": "https://www.instagram.com/reel/Dc6u2B2uN3C/", "views": 19957889, "date": "05-09-2026", "format": "continuous transformation montage cycling a person through outfits, single tool used throughout", "fit": 1},
+    {"url": "https://www.instagram.com/reel/DcwtD-OiTHy/", "views": 1483053, "date": "01-09-2026", "format": "one long continuous flying camera move through several distinct scenes, no cuts", "fit": 1},
+    {"url": "https://www.instagram.com/reel/DdVfkIbIyVS/", "views": 25317092, "date": "16-09-2026", "format": "single shot, in-camera colour/state change effect on a pet mid-shot", "fit": 1}
+  ],
+  "chosen": {
+    "reused_concept": "20-09-2026-coffee-reset",
+    "why": "Best-fit trend this run (DdP4gu6tGMk, fit 3) confirms the same device already used in the coffee-reset concept made 20-09-2026: an unbroken camera move (there: a slow pour; here: a slow orbit) that hides an object's state change with no cut. Reused the already-QA'd concept, prompt and reference stills instead of starting a new folder — no video had ever actually been produced under that concept (both prior nights stopped at the pre-flight cost gate with 0 credits spent), so it doesn't count as a repeated published idea, and reusing the stills saved ~8 credits of new image generation."
+  }
+}

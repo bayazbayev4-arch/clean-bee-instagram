@@ -1,13 +1,14 @@
 {
-  "date": "20-09-2026",
+  "date": "22-09-2026",
+  "time": "19:00",
   "time_source": "fallback",
   "mode": "live",
   "model": "seedance_2_5",
-  "credits_spent": 0,
+  "credits_spent": 120,
   "trend_urls": [
     "https://www.instagram.com/reel/DbvLqQ9Mz9M/",
-    "https://www.tiktok.com/@promptcraft.lab/video/7684838469532650759",
-    "https://www.instagram.com/reel/Dah2lZ0xOhW/"
+    "https://www.instagram.com/reel/DdP4gu6tGMk/",
+    "https://www.instagram.com/reel/DdAJ_uaIXJ1/"
   ],
   "element_ids": {
     "person": "c30f4ede-92d6-406d-b24e-0c3a3231fa55",
@@ -18,14 +19,15 @@
     "mug": "49d9fa33-f7e1-47c1-8a9b-51d1a3caf565"
   },
   "branded_props": ["mug (navy logo, light ceramic surface)"],
-  "video_job_id": null,
-  "video_url": null,
-  "metricool_post_id": null,
-  "tiktok_post_id": null,
+  "video_job_id": "7ee29229-28d6-4386-8515-a9731775cf9c",
+  "video_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/674a707fb3a3f8ba6122f95a2cc716ee4de64ba7/20-09-2026-coffee-reset.mp4",
+  "metricool_post_id": 379546976,
+  "tiktok_post_id": 379547045,
   "qa": {
     "person_still": "sharp face, full body, no letters/logos, hands look intact",
-    "mug_still": "logo matches brand/logos/stacked-centred-transparent.png exactly, no box/panel/sticker, printed straight onto ceramic"
+    "mug_still": "logo matches brand/logos/stacked-centred-transparent.png exactly, no box/panel/sticker, printed straight onto ceramic",
+    "video_frames_1_4_7_9_5": "face consistently Bee across all 4 checked frames; hands/limbs intact; coffee stain clearly blooms by 4s and is fully gone by 7s (clothes moment lands as scripted); mug logo reads clean and unwarped at 9.5s close beat; no stray text/letters/logos anywhere; no redo needed",
+    "endcard": "official stacked logo, line «Пятно? Заберём и почистим», Safe Blue pill with cleanbumblebee.com, «Ссылка в профиле» — checked visually, correct"
   },
-  "status": "stopped_before_video",
-  "stop_reason": "generate_video get_cost for seedance_2_5 at the config params (1080p, 9:16, omni_reference) returned 120 credits — above config credits(90) x 1.2 = 108, the SKILL step-5 gate. Diagnosed: cost is resolution-driven only (720p priced at 70, unaffected by ref count 1 vs 2 or generate_audio true/false); the 1080p price itself has risen from 90 to 120 credits since 15-09-2026. Per SKILL/config hard limits, did not switch to 720p or otherwise route around config on my own judgment — stopped and reporting instead."
+  "status": "scheduled"
 }
