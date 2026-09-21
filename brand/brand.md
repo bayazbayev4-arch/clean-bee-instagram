@@ -28,7 +28,7 @@ General tips not tied to a service: `#BAEBFF` or `#EAF6FE`.
 - **No 3D mascots, character poses or cartoon avatars.** The flat 2D bee mark (`cbb-mascot.png` = the mark) is fine as a small accent only.
 
 ## Typography
-Manrope only (`fonts/`). Headlines ExtraBold, body Medium/SemiBold.
+Manrope only (`fonts/`). Headlines ExtraBold, body Medium/SemiBold. Manrope has no Kazakh Ә Ғ Қ Ң Ұ — compose.py draws those from the Montserrat fallback, narrowed to match, automatically.
 
 ## Instagram feed format (guideline §08)
 - **1080 × 1080.** Top ~15%: horizontal logo lockup with clear space.

@@ -50,15 +50,22 @@ python3 skills/daily-ig-post/scripts/compose.py --layout tips --tint "#94EBE5" \
 
 Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 
+**Language slides (Bee, 21-09-2026).** `config.slide_languages` is the slide order. `["ru"]` → one image, exactly as above. More languages → every post is a swipe carousel, one slide per language:
+- Russian slide first, as above (`image.png`). Then translate its headline, tips, sub and eyebrow into each other language following `brand/translation.md` (rules + glossary) — same meaning, same number of tips, numbers and dates unchanged.
+- Render each with the same layout, tint, icon and `bg.png` (never a second Higgsfield image), plus `--lang <code>` and `--button` = `config.cta.i18n.<code>.button_label`, to `--out posts/<folder>/image-<code>.png` (`image-kk.png`, `image-en.png`). compose.py writes the `.jpg` twin next to each.
+- Look at every slide too. Kazakh runs longer — compose shrinks it to fit; if it's cramped, shorten the translation, don't change the Russian.
+
 ## 5. Caption — `caption.md`
 - Russian, 50–130 words, voice rules in `brand/brand.md`.
 - Hook line → the useful content (3–5 sentences or a short list with «—») → `config.cta.caption_line` → 5–8 hashtags.
 - Facts only from brand.md → "Facts you may state" and numbers read live in step 1.
+- **More than one slide language:** after the Russian CTA line add one short block per extra language, in slide order: a header line (`🇰🇿 Қазақша`, `🇬🇧 English`), 2–3 sentences with the key point, then `config.cta.i18n.<code>.caption_line`. Hashtags stay Russian and go last. Whole caption ≤ 2,000 characters (Instagram cuts at 2,200) — shorten the extra blocks first.
 
 ## 6. Publish the image
 - `compose.py` writes `image.png` (Instagram) and `image.jpg` (TikTok — it rejects PNG with "The 'image/png' type is not allowed, use 'image/jpeg' or 'image/webp'"). A folder without `image.jpg` → `python3 -c "from PIL import Image; Image.open('posts/<folder>/image.png').convert('RGB').save('posts/<folder>/image.jpg', quality=92, subsampling=0)"`.
 - `git add posts && git commit -m "posts: <date>" && git push`.
 - Image URLs = `config.image_url_pattern` (PNG, Instagram) and `config.tiktok_image_url_pattern` (JPEG, TikTok) with the folder. Confirm both return HTTP 200 (`curl -sI`) before scheduling; raw GitHub can lag ~1 min, retry.
+- Language slides: the same patterns with `image.png` → `image-<code>.png` and `image.jpg` → `image-<code>.jpg`. Every slide URL must return 200 before scheduling.
 
 ## 7. Schedule in Metricool
 `createScheduledPost` with `blogId` = `config.metricool_brand_id`, `date` = ISO with `+05:00`, `info`:
@@ -71,6 +78,8 @@ Folder: `posts/DD-MM-YYYY-<a|b|c|d>-<short-latin-slug>/`.
 ```
 Metricool copies the image to its own storage on creation. Don't use `createScheduledPostForReview`.
 
+**Language slides:** one post per network still — `media` lists every slide URL in `config.slide_languages` order (PNG for Instagram, the JPEGs for TikTok and Facebook) and `mediaAltText` one short description per slide in that slide's language. Instagram, TikTok and Facebook each publish it as a swipe carousel. The Russian slide stays the cover (`photoCoverIndex` 0) and `tiktokData.title` stays Russian.
+
 **Extra networks (TikTok since 14-09-2026, Facebook since 16-09-2026 — feed posts only; stories are handled by the story skill):** for every network in `config.networks` beyond Instagram, make one **separate** `createScheduledPost` with the same date and caption and the **JPEG** image URL (`config.tiktok_image_url_pattern` — a PNG fails with "The 'image/png' type is not allowed"), `"providers": [{"network": "tiktok"}]`, no `instagramData`, and:
 ```json
 "tiktokData": {"title": "<headline, max 90 chars>", "privacyOption": "PUBLIC_TO_EVERYONE", "disableComment": false, "disableDuet": false, "disableStitch": false, "autoAddMusic": true, "photoCoverIndex": 0, "commercialContentThirdParty": false, "commercialContentOwnBrand": true, "isAigc": false}
@@ -80,7 +89,7 @@ Metricool copies the image to its own storage on creation. Don't use `createSche
 Separate posts keep one network's error from blocking the others. When counting "already done" for a date, count Instagram posts only (`instagramData.type == "POST"` with an instagram provider); if Instagram is full but a TikTok or Facebook copy is missing, add just the missing copy. Log every id in `meta.json` (`metricool_post_id`, `tiktok_post_id`, `facebook_post_id`).
 
 ## 8. Save + log
-- `meta.json`: date, slot, time, time_source, pillar, idea, layout, higgsfield_prompt, image_url, metricool_post_id, mode.
+- `meta.json`: date, slot, time, time_source, pillar, idea, layout, higgsfield_prompt, image_url, metricool_post_id, mode, and `slides` (the slide file names in order) when there is more than one language.
 - Append one row per post to `log.csv` (status `scheduled` / `draft` / `failed` + reason). Note anything learned in `MEMORY.md`.
 - Commit and push.
 

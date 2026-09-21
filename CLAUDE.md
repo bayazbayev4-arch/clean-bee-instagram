@@ -20,6 +20,7 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 - **No prices, discounts or "free delivery" claims** unless read from the live prices page that same run. The delivery-fee rules are mid-change (Sept 2026).
 - Claims must match how the service really works (see `brand/brand.md` → "How it works"). Never invent reviews, customer quotes, numbers or before/after results.
 - Language: **Russian** captions. Short, warm, everyday words — people in Astana, not marketers.
+- **Kazakh + English slides (Bee, 21-09-2026):** when `config.slide_languages` lists more than `ru`, every feed post is a swipe carousel — Russian slide first, then Kazakh, then English — and the caption gets short Kazakh and English blocks after the Russian. Translations follow `brand/translation.md`. Stories and Reels stay Russian.
 - Never repeat an idea already in `log.csv` within 30 days.
 - Text on images is rendered by `scripts/compose.py`, never by the image model (AI mangles Cyrillic).
 - Never write into another role's folders. Brand assets here are copies — the source of truth is the app repo's `public/brand/`.
@@ -30,11 +31,12 @@ Runs the Instagram page for **Clean Bumble Bee** — dry cleaning & laundry with
 |---|---|
 | `config.json` | publish mode, timezone, slots, fallback times, hosting; `reels` + `trends` for the AI Reels |
 | `brand/brand.md` | colours, font, voice, how the service works |
+| `brand/translation.md` | Kazakh + English slide rules and glossary (app's own terms) |
 | `brand/` | logo, mark, mascot, service icons, font |
 | `plan/pillars.md` | the content themes and the daily mix |
 | `plan/calendar.csv` | optional pre-planned ideas; the skill uses a row if one exists for the date |
 | `skills/daily-ig-post/` | the skill + `compose.py` |
-| `posts/` | one folder per post: `image.png`, `caption.md`, `meta.json` |
+| `posts/` | one folder per post: `image.png` (+ `image-kk.png`, `image-en.png` for carousels), `caption.md`, `meta.json` |
 | `log.csv` | one row per post |
 
 ## Memory

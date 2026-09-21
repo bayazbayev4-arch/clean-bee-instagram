@@ -18,6 +18,7 @@ Examples:
   python3 compose.py --layout fact --eyebrow "МИФ" --tint "#BAEBFF" --icon ... \
       --headline "Химчистка портит вещи" --sub "Наоборот: ..." --out image.png
   python3 compose.py --layout photo --bg bg.png --headline "..." --sub "..." --out image.png
+  python3 compose.py --lang kk --layout fact ... --out image-kk.png   # Kazakh slide (en = English)
 """
 import argparse
 import glob
@@ -43,12 +44,30 @@ WHITE = "#FFFFFF"
 
 # ---------- text with per-glyph font fallback (Manrope ships as script subsets) ----------
 
+# Manrope has no Ә Ғ Қ Ң Ұ, so Kazakh needs the Montserrat fallback. Montserrat is ~13% wider and
+# a touch heavier, so its letters are narrowed, set 50 units lighter and caps enlarged 3% to sit
+# inside Manrope words (matched by eye 21-09-2026).
+FALLBACK_WIDTH = 0.87
+FALLBACK_LIGHTER = 50
+FALLBACK_CAPS = 1.03
+WEIGHTS = {"ExtraLight": 200, "Light": 300, "Regular": 400, "Medium": 500,
+           "SemiBold": 600, "Bold": 700, "ExtraBold": 800}
+
+# Per-language labels compose.py draws itself (the skill passes headline/tips/sub/eyebrow/button).
+CITY = {"ru": "Астана", "kk": "Астана", "en": "Astana"}
+BUTTON = {"ru": "Заказать на cleanbumblebee.com",
+          "kk": "cleanbumblebee.com сайтында тапсырыс беру",
+          "en": "Order at cleanbumblebee.com"}
+
+
 class Face:
     _cache = {}
+    _fb_cache = {}
 
     def __init__(self, size, weight):
         self.size = size
         self.fonts = []
+        self.fb = None
         for path in sorted(glob.glob(os.path.join(BRAND, "fonts", "*"))):
             if not path.lower().endswith((".ttf", ".otf", ".woff2", ".woff")):
                 continue
@@ -58,6 +77,27 @@ class Face:
             except (OSError, ValueError, AttributeError):
                 pass
             self.fonts.append(f)
+            if "fallback" in os.path.basename(path):
+                self.fb, self.fb_path = f, path
+        self.fb_wght = WEIGHTS.get(weight, 700) - FALLBACK_LIGHTER
+
+    def _fb_font(self, ch):
+        size = round(self.size * (FALLBACK_CAPS if ch.isupper() else 1))
+        key = (self.fb_path, size, self.fb_wght)
+        if key not in Face._fb_cache:
+            f = ImageFont.truetype(self.fb_path, size)
+            try:
+                f.set_variation_by_axes([self.fb_wght])
+            except (OSError, ValueError, AttributeError):
+                pass
+            Face._fb_cache[key] = f
+        return Face._fb_cache[key]
+
+    def _length(self, font, text):
+        if font is not self.fb:
+            return font.getlength(text)
+        return sum(self._fb_font(ch).getlength(ch) * FALLBACK_WIDTH if ch.isalpha() else font.getlength(ch)
+                   for ch in text)
 
     def _has(self, font, ch):
         key = (id(font), ch)
@@ -80,13 +120,28 @@ class Face:
         return out
 
     def width(self, text):
-        return sum(f.getlength(t) for f, t in self.runs(text))
+        return sum(self._length(f, t) for f, t in self.runs(text))
 
     def draw(self, draw, xy, text, fill):
         x, y = xy
+        base = y + self.fonts[0].getmetrics()[0]  # Manrope baseline under the default top anchor
         for f, t in self.runs(text):
-            draw.text((x, y), t, font=f, fill=fill)
-            x += f.getlength(t)
+            if f is not self.fb:
+                draw.text((x, y), t, font=f, fill=fill)
+                x += f.getlength(t)
+                continue
+            for ch in t:  # fallback letters one by one, narrowed onto Manrope's baseline
+                if not ch.isalpha():  # symbols (→, ₸) keep the plain fallback
+                    draw.text((x, y), ch, font=f, fill=fill)
+                    x += f.getlength(ch)
+                    continue
+                fb = self._fb_font(ch)
+                adv, pad = fb.getlength(ch), self.size
+                mask = Image.new("L", (int(adv) + 2 * pad, 3 * self.size), 0)
+                ImageDraw.Draw(mask).text((pad, 2 * self.size), ch, font=fb, fill=255, anchor="ls")
+                mask = mask.resize((max(1, round(mask.width * FALLBACK_WIDTH)), mask.height), Image.LANCZOS)
+                draw.bitmap((round(x - pad * FALLBACK_WIDTH), base - 2 * self.size), mask, fill=fill)
+                x += adv * FALLBACK_WIDTH
 
 
 def wrap(face, text, max_w):
@@ -138,7 +193,7 @@ def trimmed(path):
     return im.crop(box) if box else im
 
 
-def logo_header(canvas):
+def logo_header(canvas, city="Астана"):
     """Primary horizontal lockup on white, top-left, with the Astana chip top-right."""
     logo = trimmed(os.path.join(BRAND, "logos", "primary-horizontal.png"))
     h = 84
@@ -146,7 +201,7 @@ def logo_header(canvas):
     canvas.paste(logo, (M, 44))
     draw = ImageDraw.Draw(canvas)
     face = Face(30, "Bold")
-    label = "Астана"
+    label = city
     pw, ph = round(face.width(label)) + 48, 56
     x0, y0 = W - M - pw, 44 + (h - ph) // 2
     draw.rounded_rectangle([x0, y0, x0 + pw, y0 + ph], ph // 2, fill=ICE)
@@ -183,7 +238,7 @@ CARD_TOP = 168
 
 def layout_tips(args):
     canvas = Image.new("RGB", (W, H), WHITE)
-    logo_header(canvas)
+    logo_header(canvas, args.city)
     btn_top = cta_button(canvas, args.button)
     draw = ImageDraw.Draw(canvas)
     card = [M, CARD_TOP, W - M, btn_top - 36]
@@ -226,7 +281,7 @@ def layout_tips(args):
 
 def layout_fact(args):
     canvas = Image.new("RGB", (W, H), WHITE)
-    logo_header(canvas)
+    logo_header(canvas, args.city)
     btn_top = cta_button(canvas, args.button)
     draw = ImageDraw.Draw(canvas)
     card = [M, CARD_TOP, W - M, btn_top - 36]
@@ -263,7 +318,7 @@ def cover(img, w, h):
 
 def layout_photo(args):
     canvas = Image.new("RGB", (W, H), WHITE)
-    logo_header(canvas)
+    logo_header(canvas, args.city)
     btn_top = cta_button(canvas, args.button)
     draw = ImageDraw.Draw(canvas)
     text_w = W - 2 * M - 16
@@ -294,9 +349,12 @@ def main():
     p.add_argument("--tint", default=ICE, help="service pastel hex")
     p.add_argument("--icon", help="service icon PNG (transparent)")
     p.add_argument("--bg", help="background photo (photo layout)")
-    p.add_argument("--button", default="Заказать на cleanbumblebee.com")
+    p.add_argument("--lang", choices=sorted(CITY), default="ru", help="slide language: city chip + default button")
+    p.add_argument("--button", help="CTA label; default = the --lang label")
     p.add_argument("--out", required=True)
     args = p.parse_args()
+    args.city = CITY[args.lang]
+    args.button = args.button or BUTTON[args.lang]
     if args.layout == "photo" and not args.bg:
         p.error("--bg is required for the photo layout")
     if args.layout == "tips" and not args.tips:

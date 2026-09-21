@@ -21,14 +21,23 @@
     "target": "website",
     "url": "cleanbumblebee.com",
     "button_label": "Заказать на cleanbumblebee.com",
-    "caption_line": "Оформите заказ за 60 секунд на cleanbumblebee.com — ссылка в профиле."
+    "caption_line": "Оформите заказ за 60 секунд на cleanbumblebee.com — ссылка в профиле.",
+    "i18n": {
+      "kk": {"button_label": "cleanbumblebee.com сайтында тапсырыс беру", "caption_line": "cleanbumblebee.com сайтында 60 секундта тапсырыс беріңіз — сілтеме профильде."},
+      "en": {"button_label": "Order at cleanbumblebee.com", "caption_line": "Order in 60 seconds at cleanbumblebee.com — link in bio."}
+    }
   },
   "cta_app_when_live": {
     "target": "app",
     "button_label": "Заказать в приложении",
-    "caption_line": "Оформите заказ за 60 секунд в приложении Clean Bumble Bee — ссылка в профиле."
+    "caption_line": "Оформите заказ за 60 секунд в приложении Clean Bumble Bee — ссылка в профиле.",
+    "i18n": {
+      "kk": {"button_label": "Қосымшада тапсырыс беру", "caption_line": "Clean Bumble Bee қосымшасында 60 секундта тапсырыс беріңіз — сілтеме профильде."},
+      "en": {"button_label": "Order in the app", "caption_line": "Order in 60 seconds in the Clean Bumble Bee app — link in bio."}
+    }
   },
   "language": "ru",
+  "slide_languages": ["ru"],
   "reels": {
     "enabled": true,
     "model": "seedance_2_5",
