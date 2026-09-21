@@ -63,6 +63,7 @@ BUTTON = {"ru": "Заказать на cleanbumblebee.com",
 class Face:
     _cache = {}
     _fb_cache = {}
+    _font_cache = {}  # (path, size, weight) -> font object, kept alive so id() is never reused (see _has)
 
     def __init__(self, size, weight):
         self.size = size
@@ -71,11 +72,15 @@ class Face:
         for path in sorted(glob.glob(os.path.join(BRAND, "fonts", "*"))):
             if not path.lower().endswith((".ttf", ".otf", ".woff2", ".woff")):
                 continue
-            f = ImageFont.truetype(path, size)
-            try:
-                f.set_variation_by_name(weight)
-            except (OSError, ValueError, AttributeError):
-                pass
+            key = (path, size, weight)
+            f = Face._font_cache.get(key)
+            if f is None:
+                f = ImageFont.truetype(path, size)
+                try:
+                    f.set_variation_by_name(weight)
+                except (OSError, ValueError, AttributeError):
+                    pass
+                Face._font_cache[key] = f
             self.fonts.append(f)
             if "fallback" in os.path.basename(path):
                 self.fb, self.fb_path = f, path
