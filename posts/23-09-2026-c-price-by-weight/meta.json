@@ -1,0 +1,17 @@
+{
+  "date": "23-09-2026",
+  "slot": "c",
+  "time": "17:00",
+  "time_source": "fallback",
+  "pillar": "How it works",
+  "idea": "Final price is set by weight and condition, confirmed by the master before cleaning starts",
+  "layout": "tips",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/23-09-2026-c-price-by-weight/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/23-09-2026-c-price-by-weight/image.jpg",
+  "metricool_post_id": 380193414,
+  "tiktok_post_id": 380193699,
+  "facebook_post_id": 380193992,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
