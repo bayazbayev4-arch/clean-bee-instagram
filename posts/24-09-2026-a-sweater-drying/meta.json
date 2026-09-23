@@ -1,0 +1,17 @@
+{
+  "date": "24-09-2026",
+  "slot": "a",
+  "time": "08:30",
+  "time_source": "fallback",
+  "pillar": "Care tip",
+  "idea": "Dry a sweater/jumper flat and reshape it while damp so it keeps its shape",
+  "layout": "tips",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/24-09-2026-a-sweater-drying/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/24-09-2026-a-sweater-drying/image.jpg",
+  "metricool_post_id": 380843812,
+  "tiktok_post_id": 380844189,
+  "facebook_post_id": 380844491,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}

@@ -1,0 +1,17 @@
+{
+  "date": "24-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback",
+  "pillar": "Seasonal",
+  "idea": "Swap summer bed linen for a warmer set before it gets cold, home textiles -25% discount (read live)",
+  "layout": "photo",
+  "higgsfield_prompt": "Photo of a bright modern Scandinavian minimalist bedroom in Astana, warm golden autumn afternoon light through large windows, a neatly made bed with crisp warm-toned flannel bedding being laid out by hand, folded lighter summer bedding stacked to the side in a breathable garment bag, Baiterek tower skyline visible softly through the window, cheerful and airy atmosphere, high-key natural light, tidy and uncluttered, no text, no letters, no logos, no watermark",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/24-09-2026-d-bedding-season-swap/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/24-09-2026-d-bedding-season-swap/image.jpg",
+  "metricool_post_id": 380844059,
+  "tiktok_post_id": 380844399,
+  "facebook_post_id": 380844723,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}

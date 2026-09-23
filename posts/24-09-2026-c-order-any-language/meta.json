@@ -1,0 +1,17 @@
+{
+  "date": "24-09-2026",
+  "slot": "c",
+  "time": "17:00",
+  "time_source": "fallback",
+  "pillar": "How it works",
+  "idea": "Order and chat with us in Russian, Kazakh or English",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/24-09-2026-c-order-any-language/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/24-09-2026-c-order-any-language/image.jpg",
+  "metricool_post_id": 380843997,
+  "tiktok_post_id": 380844311,
+  "facebook_post_id": 380844633,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
