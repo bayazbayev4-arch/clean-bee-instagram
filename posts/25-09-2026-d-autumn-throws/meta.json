@@ -1,0 +1,17 @@
+{
+  "date": "25-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback",
+  "pillar": "Seasonal",
+  "idea": "Freshen sofa throws and plaids before cosy autumn evenings, home textiles -25% discount (read live)",
+  "layout": "photo",
+  "higgsfield_prompt": "Photo of a bright modern Scandinavian minimalist living room in Astana, warm golden autumn afternoon light through large windows, a cozy sofa with a chunky knit throw blanket and plaid folded neatly over the armrest, soft cushions, a steaming mug on a nearby side table, Baiterek tower skyline visible softly through the window, cheerful and airy atmosphere, high-key natural light, tidy and uncluttered, no text, no letters, no logos, no watermark",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/25-09-2026-d-autumn-throws/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/25-09-2026-d-autumn-throws/image.jpg",
+  "metricool_post_id": null,
+  "tiktok_post_id": null,
+  "facebook_post_id": null,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
