@@ -1,0 +1,17 @@
+{
+  "date": "26-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback",
+  "pillar": "Seasonal",
+  "idea": "Refresh duvets and throws before the cold sets in + -25% discount (read live)",
+  "layout": "photo",
+  "higgsfield_prompt": "A cozy Scandinavian-style bedroom in soft morning light, a neatly folded fluffy white duvet and a knit plaid blanket stacked on a crisp white bed, warm knit textures, a large window showing the Baiterek tower skyline of Astana in the background, minimalist modern apartment interior, high-key bright and airy atmosphere, no text, no letters, no logos, no watermark",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/26-09-2026-d-duvets-cold/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/26-09-2026-d-duvets-cold/image.jpg",
+  "metricool_post_id": null,
+  "tiktok_post_id": null,
+  "facebook_post_id": null,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
