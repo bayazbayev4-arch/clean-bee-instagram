@@ -1,0 +1,17 @@
+{
+  "date": "27-09-2026",
+  "slot": "b",
+  "time": "12:30",
+  "time_source": "fallback",
+  "pillar": "Care-label decoder",
+  "idea": "Line inside the square symbol means dry the item laid flat, not tumble dried",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/27-09-2026-b-square-line-symbol/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/27-09-2026-b-square-line-symbol/image.jpg",
+  "metricool_post_id": null,
+  "tiktok_post_id": null,
+  "facebook_post_id": null,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}

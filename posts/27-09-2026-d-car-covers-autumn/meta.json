@@ -1,0 +1,17 @@
+{
+  "date": "27-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback",
+  "pillar": "Seasonal",
+  "idea": "Refresh car seat covers before the cold + -25% discount (read live)",
+  "layout": "photo",
+  "higgsfield_prompt": "A bright high-key modern Scandinavian-style apartment interior in soft morning light, neatly folded beige and cream car seat covers and textile upholstery covers stacked on a clean white table, cozy minimalist decor, fresh crisp fabric textures, a large window showing the Baiterek tower skyline of Astana in the background, airy and cheerful atmosphere, no text, no letters, no logos, no watermark",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/27-09-2026-d-car-covers-autumn/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/27-09-2026-d-car-covers-autumn/image.jpg",
+  "metricool_post_id": null,
+  "tiktok_post_id": null,
+  "facebook_post_id": null,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
