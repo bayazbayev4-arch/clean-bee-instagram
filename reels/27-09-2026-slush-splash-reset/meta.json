@@ -1,0 +1,21 @@
+{
+  "date": "27-09-2026",
+  "time": "19:00",
+  "time_source": "fallback (heat map still all zero)",
+  "mode": "live",
+  "model": "seedance_2_5",
+  "credits_spent": 128,
+  "credits_breakdown": {"person_still": 4, "umbrella_still": 4, "video_1080p": 120},
+  "trend_urls": ["https://www.instagram.com/reel/Dc-wEcXSVnl/"],
+  "element_ids": {"person": "2231ac0e-fdb1-439c-9c83-f4eb450aceed", "logo_light": "e669ecfd-37e7-40ea-a2e8-6bd7404fc182"},
+  "image_job_ids": {"person": "e6f365cc-3ba2-4733-801e-2db596624545", "umbrella": "d83dec70-68ce-4322-bf96-a2156ea21454"},
+  "branded_props": ["pale sky-blue umbrella, Clean Bumble Bee logo printed on canopy (light-surface logo)"],
+  "video_job_id": "5d05b424-50bc-462d-a126-e6694fa0a249",
+  "video_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/b6cba06fe3f729ce29514180950ca73cae5fcde2/27-09-2026-slush-splash-reset.mp4",
+  "metricool_post_id": 382575011,
+  "tiktok_post_id": 382575053,
+  "qa": {
+    "stills": "both passed on first take, no redo needed",
+    "video": "passed on first take, no redo needed — frames at 1/4/7/9.5s checked: coat clean at 1s, visibly splattered at 4s, clean again by 7s, calm final beat at 9.5s with consistent face and clean unwarped umbrella logo, no stray text"
+  }
+}

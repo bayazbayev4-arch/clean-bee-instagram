@@ -1,0 +1,28 @@
+{
+  "date": "27-09-2026",
+  "tiktok": {"status": "noResults for all 4 keywords (seedance, kling ai, higgsfield, ai video) - same as 22-09-2026 run"},
+  "instagram_shortlist": [
+    {
+      "url": "https://www.instagram.com/reel/Dc-wEcXSVnl/",
+      "views": 8123176,
+      "date": "2026-09-07",
+      "format": "two opposing elements (lava, glacier) collide in one continuous shot; the state changes instantly at the point of impact, no cut",
+      "fit": 3
+    },
+    {
+      "url": "https://www.instagram.com/reel/DcyKuoKqpc8/",
+      "views": 576275,
+      "date": "2026-09-02",
+      "format": "a rough/unfinished object transforms into a refined state within one continuous camera move",
+      "fit": 2
+    },
+    {
+      "url": "https://www.instagram.com/reel/DdGvPEhODzI/",
+      "views": 151211,
+      "date": "2026-09-10",
+      "format": "single static clip re-shot with multiple camera angles around the same moment",
+      "fit": 1
+    }
+  ],
+  "chosen": "Dc-wEcXSVnl - collision/instant-transformation-in-one-shot device, adapted to a car-splash clothes moment"
+}
