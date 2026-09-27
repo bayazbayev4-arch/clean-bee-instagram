@@ -1,0 +1,16 @@
+{
+  "date": "28-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback",
+  "pillar": "Seasonal",
+  "idea": "Clean Bumble Bee officially opens in Astana today + -25% discount on all services (read live)",
+  "layout": "photo",
+  "higgsfield_prompt": "High-key natural morning light streaming through a large window into a modern minimalist Scandinavian-style apartment entryway in Astana, a cheerful young woman smiling as she opens the front door to receive a neatly folded stack of pressed clothes and a garment bag handed over just outside, crisp white walls, warm wood floor, the Baiterek tower skyline faintly visible through the window in the background, bright airy atmosphere, photorealistic, no text, no letters, no logos, no watermark",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/28-09-2026-d-we-opened/image.png",
+  "metricool_post_id": 382935065,
+  "tiktok_post_id": 382935344,
+  "facebook_post_id": 382935563,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}

@@ -1,0 +1,16 @@
+{
+  "date": "28-09-2026",
+  "slot": "c",
+  "time": "17:00",
+  "time_source": "fallback",
+  "pillar": "How it works",
+  "idea": "The master states the exact price at intake and cleaning only starts after customer approval",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/28-09-2026-c-work-starts-after-approval/image.png",
+  "metricool_post_id": 382935004,
+  "tiktok_post_id": 382935291,
+  "facebook_post_id": 382935523,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}

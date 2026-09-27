@@ -1,0 +1,16 @@
+{
+  "date": "28-09-2026",
+  "slot": "b",
+  "time": "12:30",
+  "time_source": "fallback",
+  "pillar": "Care-label decoder",
+  "idea": "Letter W inside the circle symbol means professional wet (aqua) cleaning is allowed",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/28-09-2026-b-wet-clean-w-symbol/image.png",
+  "metricool_post_id": 382934946,
+  "tiktok_post_id": 382935236,
+  "facebook_post_id": 382935470,
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
