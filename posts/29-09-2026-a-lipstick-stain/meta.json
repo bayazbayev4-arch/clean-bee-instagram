@@ -1,0 +1,13 @@
+{
+  "date": "29-09-2026",
+  "slot": "a",
+  "time": "08:30",
+  "time_source": "fallback",
+  "pillar": "Care tip",
+  "idea": "Removing a fresh lipstick stain: blot excess, dab with rubbing alcohol, wash as usual",
+  "layout": "tips",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/29-09-2026-a-lipstick-stain/image.png",
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
