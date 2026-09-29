@@ -1,0 +1,14 @@
+{
+  "date": "30-09-2026",
+  "slot": "d",
+  "time": "20:30",
+  "time_source": "fallback",
+  "pillar": "Seasonal",
+  "idea": "Clean kids' winter snowsuits before the season starts + -25% discount (read live)",
+  "layout": "photo",
+  "higgsfield_prompt": "High-key photograph of a cosy Scandinavian-style kids' entryway in Astana, a small folded children's winter snowsuit and knitted mittens neatly laid on a light wooden bench, soft morning light through a window, Baiterek Tower skyline visible outside, fresh minimalist interior, no text, no letters, no logos, no watermark",
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/30-09-2026-d-kids-snowsuits/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/30-09-2026-d-kids-snowsuits/image.jpg",
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}

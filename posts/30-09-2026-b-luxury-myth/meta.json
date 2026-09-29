@@ -1,0 +1,14 @@
+{
+  "date": "30-09-2026",
+  "slot": "b",
+  "time": "12:30",
+  "time_source": "fallback",
+  "pillar": "Myth vs fact",
+  "idea": "Myth: dry cleaning is only for expensive or luxury clothes",
+  "layout": "fact",
+  "higgsfield_prompt": null,
+  "image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/30-09-2026-b-luxury-myth/image.png",
+  "tiktok_image_url": "https://raw.githubusercontent.com/bayazbayev4-arch/clean-bee-instagram/main/posts/30-09-2026-b-luxury-myth/image.jpg",
+  "mode": "auto",
+  "slides": ["image.png", "image-kk.png", "image-en.png"]
+}
