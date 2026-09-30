@@ -1,6 +1,6 @@
 # Clean Bumble Bee — brand sheet for Instagram
 
-Source of truth: `App Developer/niches/dry-cleaning/clean-bee/References/Images/00-brand-guidelines/11-09-2026-clean-bumblebee-brand-identity-guidelines.pdf` (v2.0, 11-09-2026). This sheet is the Instagram-relevant summary. `compose.py` already applies every visual rule below.
+Source of truth: `companies/clean-bumblebee/app/References/Images/00-brand-guidelines/11-09-2026-clean-bumblebee-brand-identity-guidelines.pdf` (v2.0, 11-09-2026). This sheet is the Instagram-relevant summary. `compose.py` already applies every visual rule below.
 
 ## Colours
 - **Vibrant Blue `#0690F1` is the majority colour.** Never under white text — use **Safe Blue `#0578CC`** for blue buttons/banners with white text.
